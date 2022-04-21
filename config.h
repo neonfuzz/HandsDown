@@ -24,6 +24,10 @@
 // Linger definitions.
 #define LINGER_TERM (TAPPING_TERM*3/5)
 
+// Layer tap toggle number of taps.
+#undef TAPPING_TOGGLE
+#define TAPPING_TOGGLE 2
+
 // Mouse mode settings.
 #undef MOUSEKEY_MAX_SPEED
 #define MOUSEKEY_MAX_SPEED 6
