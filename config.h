@@ -18,6 +18,9 @@
 #undef COMBO_TERM
 #define COMBO_TERM (TAPPING_TERM/5)
 
+// Adaptive definitions.
+#define ADAPTIVE_TERM (TAPPING_TERM*1.1)
+
 // Mouse mode settings.
 #undef MOUSEKEY_MAX_SPEED
 #define MOUSEKEY_MAX_SPEED 6
