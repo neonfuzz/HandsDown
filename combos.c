@@ -12,6 +12,92 @@ enum combos {
     HI_WH,
     GM_GH,
     PM_PH,
+    // 3-grams
+    AG_ANG,
+    EG_ENG,
+    EX_EXC,
+    IG_ING,
+    IK_ITY,
+    NC_NCE,
+    NH_NCH,
+    IN_N_T,
+    OG_ONG,
+    UG_UNG,
+    WY_WHY,
+    // 4-grams
+    AH_AUGH,
+    AV_AVER,
+    CR_CESS,
+    EV_EVER,
+    FX_FROM,
+    HR_HERE,
+    HV_HAVE,
+    IT_IGHT,
+    IV_IVER,
+    LR_LESS,
+    MT_MENT,
+    NR_NESS,
+    OD_OULD,
+    OH_OUGH,
+    OV_OVER,
+    SI_SEMI,
+    SD_SOME,
+    SL_SELF,
+    SP_SHIP,
+    TE_TIME,
+    TN_TION,
+    WA_WARD,
+    WI_WITH,
+    WO_WORD,
+    WT_WHAT,
+    WN_WHEN,
+    WX_WERE,
+    // 5-grams
+    AM_ACCOM,
+    IEG_INGLE,
+    MJ_MULTI,
+    OL_OLOGY,
+    OR_OTHER,
+    OT_OUGHT,
+    RM_RECOM,
+    SR_SUPER,
+    TA_TRANS,
+    TR_THERE,
+    TG_THING,
+    UR_UNDER,
+    WC_WHICH,
+    WR_WHERE,
+    // 6-grams
+    NA_NATION,
+    PE_PEOPLE,
+    // 7-grams
+    UM_UNACCOM,
+    // Pronouns
+    ID_ID,
+    IE_IVE,
+    IL_ILL,
+    IM_IM,
+    MS_MYSELF,
+    TD_THEYD,
+    TJ_THEYRE,
+    TL_THEYLL,
+    TV_THEYVE,
+    TX_THEIR,
+    TY_THEY,
+    MD_THEM,
+    TS_THEMSELVES,
+    WD_WED,
+    WJ_WERE,
+    WL_WELL,
+    WV_WEVE,
+    OS_OURSELVES,
+    YD_YOUD,
+    YJ_YOURE,
+    YL_YOULL,
+    YV_YOUVE,
+    YX_YOUR,
+    YF_YOURSELF,
+    YS_YOURSELVES,
     // Automatically count the number of combos.
     COMBO_LENGTH
 };
@@ -32,6 +118,98 @@ const uint16_t PROGMEM hi_wh_combo[] = {RCTL_T(KC_H), RGUI_T(KC_I), COMBO_END};
 const uint16_t PROGMEM gm_gh_combo[] = {KC_G, KC_M, COMBO_END};
 const uint16_t PROGMEM pm_ph_combo[] = {KC_P, KC_M, COMBO_END};
 
+// 3-grams
+const uint16_t PROGMEM ang_combo[] = {RSFT_T(KC_A), KC_G, COMBO_END};
+const uint16_t PROGMEM eng_combo[] = {RALT_T(KC_E), KC_G, COMBO_END};
+const uint16_t PROGMEM exc_combo[] = {RALT_T(KC_E), KC_X, COMBO_END};
+const uint16_t PROGMEM ing_combo[] = {RGUI_T(KC_I), KC_G, COMBO_END};
+const uint16_t PROGMEM ity_combo[] = {RGUI_T(KC_I), KC_K, COMBO_END};
+const uint16_t PROGMEM nce_combo[] = {LALT_T(KC_N), KC_C, COMBO_END};
+const uint16_t PROGMEM nch_combo[] = {LALT_T(KC_N), RCTL_T(KC_H), COMBO_END};
+const uint16_t PROGMEM n_t_combo[] = {RGUI_T(KC_I), LALT_T(KC_N), COMBO_END};
+const uint16_t PROGMEM ong_combo[] = {KC_O, KC_G, COMBO_END};
+const uint16_t PROGMEM ung_combo[] = {KC_U, KC_G, COMBO_END};
+const uint16_t PROGMEM why_combo[] = {KC_W, KC_Y, COMBO_END};
+
+// 4-grams
+const uint16_t PROGMEM augh_combo[]  = {RSFT_T(KC_A), RCTL_T(KC_H), COMBO_END};
+const uint16_t PROGMEM aver_combo[]  = {RSFT_T(KC_A), KC_V, COMBO_END};
+const uint16_t PROGMEM cess_combo[]  = {KC_C, LCTL_T(KC_R), COMBO_END};
+const uint16_t PROGMEM ever_combo[]  = {RALT_T(KC_E), KC_V, COMBO_END};
+const uint16_t PROGMEM from_combo[]  = {KC_F, KC_X, COMBO_END};
+const uint16_t PROGMEM here_combo[]  = {RCTL_T(KC_H), LCTL_T(KC_R), COMBO_END};
+const uint16_t PROGMEM have_combo[]  = {RCTL_T(KC_H), KC_V, COMBO_END};
+const uint16_t PROGMEM ight_combo[]  = {RGUI_T(KC_I), KC_T, COMBO_END};
+const uint16_t PROGMEM iver_combo[]  = {RGUI_T(KC_I), KC_V, COMBO_END};
+const uint16_t PROGMEM less_combo[]  = {KC_L, LCTL_T(KC_R), COMBO_END};
+const uint16_t PROGMEM ment_combo[]  = {KC_M, KC_T, COMBO_END};
+const uint16_t PROGMEM ness_combo[]  = {LALT_T(KC_N), LCTL_T(KC_R), COMBO_END};
+const uint16_t PROGMEM ould_combo[]  = {KC_O, LSFT_T(KC_D), COMBO_END};
+const uint16_t PROGMEM ough_combo[]  = {KC_O, RCTL_T(KC_H), COMBO_END};
+const uint16_t PROGMEM over_combo[]  = {KC_O, KC_V, COMBO_END};
+const uint16_t PROGMEM semi_combo[]  = {LGUI_T(KC_S), RGUI_T(KC_I), COMBO_END};
+const uint16_t PROGMEM some_combo[]  = {LGUI_T(KC_S), LSFT_T(KC_D), COMBO_END};
+const uint16_t PROGMEM self_combo[]  = {LGUI_T(KC_S), KC_L, COMBO_END};
+const uint16_t PROGMEM ship_combo[]  = {LGUI_T(KC_S), KC_P, COMBO_END};
+const uint16_t PROGMEM time_combo[]  = {KC_T, RALT_T(KC_E), COMBO_END};
+const uint16_t PROGMEM tion_combo[]  = {KC_T, LALT_T(KC_N), COMBO_END};
+const uint16_t PROGMEM ward_combo[]  = {KC_W, RSFT_T(KC_A), COMBO_END};
+const uint16_t PROGMEM with_combo[]  = {KC_W, RGUI_T(KC_I), COMBO_END};
+const uint16_t PROGMEM word_combo[]  = {KC_W, KC_O, COMBO_END};
+const uint16_t PROGMEM what_combo[]  = {KC_W, KC_T, COMBO_END};
+const uint16_t PROGMEM when_combo[]  = {KC_W, LALT_T(KC_N), COMBO_END};
+const uint16_t PROGMEM werex_combo[] = {KC_W, KC_X, COMBO_END};
+
+// 5-grams
+const uint16_t PROGMEM accom_combo[] = {RSFT_T(KC_A), KC_M, COMBO_END};
+const uint16_t PROGMEM ingle_combo[] = {RGUI_T(KC_I), RALT_T(KC_E), KC_G, COMBO_END};
+const uint16_t PROGMEM multi_combo[] = {KC_M, KC_J, COMBO_END};
+const uint16_t PROGMEM ology_combo[] = {KC_O, KC_L, COMBO_END};
+const uint16_t PROGMEM other_combo[] = {KC_O, LCTL_T(KC_R), COMBO_END};
+const uint16_t PROGMEM ought_combo[] = {KC_O, KC_T, COMBO_END};
+const uint16_t PROGMEM recom_combo[] = {LCTL_T(KC_R), KC_M, COMBO_END};
+const uint16_t PROGMEM super_combo[] = {LGUI_T(KC_S), LCTL_T(KC_R), COMBO_END};
+const uint16_t PROGMEM trans_combo[] = {KC_T, RSFT_T(KC_A), COMBO_END};
+const uint16_t PROGMEM there_combo[] = {KC_T, LCTL_T(KC_R), COMBO_END};
+const uint16_t PROGMEM thing_combo[] = {KC_T, KC_G, COMBO_END};
+const uint16_t PROGMEM under_combo[] = {KC_U, LCTL_T(KC_R), COMBO_END};
+const uint16_t PROGMEM which_combo[] = {KC_W, KC_C, COMBO_END};
+const uint16_t PROGMEM where_combo[] = {KC_W, LCTL_T(KC_R), COMBO_END};
+
+// 6-grams
+const uint16_t PROGMEM nation_combo[] = {LALT_T(KC_N), RSFT_T(KC_A), COMBO_END};
+const uint16_t PROGMEM people_combo[] = {KC_P, RALT_T(KC_E), COMBO_END};
+
+// 7-grams
+const uint16_t PROGMEM unaccom_combo[] = {KC_U, KC_M, COMBO_END};
+
+// Pronouns
+const uint16_t PROGMEM id_combo[]         = {RGUI_T(KC_I), LSFT_T(KC_D), COMBO_END};
+const uint16_t PROGMEM ive_combo[]        = {RGUI_T(KC_I), RALT_T(KC_E), COMBO_END};
+const uint16_t PROGMEM ill_combo[]        = {RGUI_T(KC_I), KC_L, COMBO_END};
+const uint16_t PROGMEM im_combo[]         = {RGUI_T(KC_I), KC_M, COMBO_END};
+const uint16_t PROGMEM myself_combo[]     = {KC_M, LGUI_T(KC_S), COMBO_END};
+const uint16_t PROGMEM theyd_combo[]      = {KC_T, LSFT_T(KC_D), COMBO_END};
+const uint16_t PROGMEM theyre_combo[]     = {KC_T, KC_J, COMBO_END};
+const uint16_t PROGMEM theyll_combo[]     = {KC_T, KC_L, COMBO_END};
+const uint16_t PROGMEM theyve_combo[]     = {KC_T, KC_V, COMBO_END};
+const uint16_t PROGMEM their_combo[]      = {KC_T, KC_X, COMBO_END};
+const uint16_t PROGMEM they_combo[]       = {KC_T, KC_Y, COMBO_END};
+const uint16_t PROGMEM them_combo[]       = {KC_M, LSFT_T(KC_D), COMBO_END};
+const uint16_t PROGMEM themselves_combo[] = {KC_T, LGUI_T(KC_S), COMBO_END};
+const uint16_t PROGMEM wed_combo[]        = {KC_W, LSFT_T(KC_D), COMBO_END};
+const uint16_t PROGMEM were_combo[]       = {KC_W, KC_J, COMBO_END};
+const uint16_t PROGMEM well_combo[]       = {KC_W, KC_L, COMBO_END};
+const uint16_t PROGMEM weve_combo[]       = {KC_W, KC_V, COMBO_END};
+const uint16_t PROGMEM ourselves_combo[]  = {KC_O, LGUI_T(KC_S), COMBO_END};
+const uint16_t PROGMEM youd_combo[]       = {KC_Y, LSFT_T(KC_D), COMBO_END};
+const uint16_t PROGMEM youre_combo[]      = {KC_Y, KC_J, COMBO_END};
+const uint16_t PROGMEM youll_combo[]      = {KC_Y, KC_L, COMBO_END};
+const uint16_t PROGMEM youve_combo[]      = {KC_Y, KC_V, COMBO_END};
+const uint16_t PROGMEM your_combo[]       = {KC_Y, KC_X, COMBO_END};
+const uint16_t PROGMEM yourself_combo[]   = {KC_Y, KC_F, COMBO_END};
+const uint16_t PROGMEM yourselves_combo[] = {KC_Y, LGUI_T(KC_S), COMBO_END};
+
 // ----------------------------
 // Map combos to their results.
 // ----------------------------
@@ -46,6 +224,92 @@ combo_t key_combos[] = {
     [HI_WH] = COMBO_ACTION(hi_wh_combo),
     [GM_GH] = COMBO_ACTION(gm_gh_combo),
     [PM_PH] = COMBO_ACTION(pm_ph_combo),
+    // 3-grams
+    [AG_ANG] = COMBO_ACTION(ang_combo),
+    [EG_ENG] = COMBO_ACTION(eng_combo),
+    [EX_EXC] = COMBO_ACTION(exc_combo),
+    [IG_ING] = COMBO_ACTION(ing_combo),
+    [IK_ITY] = COMBO_ACTION(ity_combo),
+    [NC_NCE] = COMBO_ACTION(nce_combo),
+    [NH_NCH] = COMBO_ACTION(nch_combo),
+    [IN_N_T] = COMBO_ACTION(n_t_combo),
+    [OG_ONG] = COMBO_ACTION(ong_combo),
+    [UG_UNG] = COMBO_ACTION(ung_combo),
+    [WY_WHY] = COMBO_ACTION(why_combo),
+    // 4-grams
+    [AH_AUGH] = COMBO_ACTION(augh_combo),
+    [AV_AVER] = COMBO_ACTION(aver_combo),
+    [CR_CESS] = COMBO_ACTION(cess_combo),
+    [EV_EVER] = COMBO_ACTION(ever_combo),
+    [FX_FROM] = COMBO_ACTION(from_combo),
+    [HR_HERE] = COMBO_ACTION(here_combo),
+    [HV_HAVE] = COMBO_ACTION(have_combo),
+    [IT_IGHT] = COMBO_ACTION(ight_combo),
+    [IV_IVER] = COMBO_ACTION(iver_combo),
+    [LR_LESS] = COMBO_ACTION(less_combo),
+    [MT_MENT] = COMBO_ACTION(ment_combo),
+    [NR_NESS] = COMBO_ACTION(ness_combo),
+    [OD_OULD] = COMBO_ACTION(ould_combo),
+    [OH_OUGH] = COMBO_ACTION(ough_combo),
+    [OV_OVER] = COMBO_ACTION(over_combo),
+    [SI_SEMI] = COMBO_ACTION(semi_combo),
+    [SD_SOME] = COMBO_ACTION(some_combo),
+    [SL_SELF] = COMBO_ACTION(self_combo),
+    [SP_SHIP] = COMBO_ACTION(ship_combo),
+    [TE_TIME] = COMBO_ACTION(time_combo),
+    [TN_TION] = COMBO_ACTION(tion_combo),
+    [WA_WARD] = COMBO_ACTION(ward_combo),
+    [WI_WITH] = COMBO_ACTION(with_combo),
+    [WO_WORD] = COMBO_ACTION(word_combo),
+    [WT_WHAT] = COMBO_ACTION(what_combo),
+    [WN_WHEN] = COMBO_ACTION(when_combo),
+    [WX_WERE] = COMBO_ACTION(werex_combo),
+    // 5-grams
+    [AM_ACCOM]  = COMBO_ACTION(accom_combo),
+    [IEG_INGLE] = COMBO_ACTION(ingle_combo),
+    [MJ_MULTI]  = COMBO_ACTION(multi_combo),
+    [OL_OLOGY]  = COMBO_ACTION(ology_combo),
+    [OR_OTHER]  = COMBO_ACTION(other_combo),
+    [OT_OUGHT]  = COMBO_ACTION(ought_combo),
+    [RM_RECOM]  = COMBO_ACTION(recom_combo),
+    [SR_SUPER]  = COMBO_ACTION(super_combo),
+    [TA_TRANS]  = COMBO_ACTION(trans_combo),
+    [TR_THERE]  = COMBO_ACTION(there_combo),
+    [TG_THING]  = COMBO_ACTION(thing_combo),
+    [UR_UNDER]  = COMBO_ACTION(under_combo),
+    [WC_WHICH]  = COMBO_ACTION(which_combo),
+    [WR_WHERE]  = COMBO_ACTION(where_combo),
+    // 6-grams
+    [NA_NATION] = COMBO_ACTION(nation_combo),
+    [PE_PEOPLE] = COMBO_ACTION(people_combo),
+    // 7-grams
+    [UM_UNACCOM] = COMBO_ACTION(unaccom_combo),
+    // Pronouns
+    [ID_ID]         = COMBO_ACTION(id_combo),
+    [IE_IVE]        = COMBO_ACTION(ive_combo),
+    [IL_ILL]        = COMBO_ACTION(ill_combo),
+    [IM_IM]         = COMBO_ACTION(im_combo),
+    [MS_MYSELF]     = COMBO_ACTION(myself_combo),
+    [TD_THEYD]      = COMBO_ACTION(theyd_combo),
+    [TJ_THEYRE]     = COMBO_ACTION(theyre_combo),
+    [TL_THEYLL]     = COMBO_ACTION(theyll_combo),
+    [TV_THEYVE]     = COMBO_ACTION(theyve_combo),
+    [TX_THEIR]      = COMBO_ACTION(their_combo),
+    [TY_THEY]       = COMBO_ACTION(they_combo),
+    [MD_THEM]       = COMBO_ACTION(them_combo),
+    [TS_THEMSELVES] = COMBO_ACTION(themselves_combo),
+    [WD_WED]        = COMBO_ACTION(wed_combo),
+    [WJ_WERE]       = COMBO_ACTION(were_combo),
+    [WL_WELL]       = COMBO_ACTION(well_combo),
+    [WV_WEVE]       = COMBO_ACTION(weve_combo),
+    [OS_OURSELVES]  = COMBO_ACTION(ourselves_combo),
+    [YD_YOUD]       = COMBO_ACTION(youd_combo),
+    [YJ_YOURE]      = COMBO_ACTION(youre_combo),
+    [YL_YOULL]      = COMBO_ACTION(youll_combo),
+    [YV_YOUVE]      = COMBO_ACTION(youve_combo),
+    [YX_YOUR]       = COMBO_ACTION(your_combo),
+    [YF_YOURSELF]   = COMBO_ACTION(yourself_combo),
+    [YS_YOURSELVES] = COMBO_ACTION(yourselves_combo),
 };
 
 // --------------------------------------
@@ -84,6 +348,415 @@ void process_combo_event(uint16_t combo_index, bool pressed) {
                 tap_code16(KC_P);
                 clear_mods();
                 tap_code16(KC_H);
+                break;
+            // 3-grams
+            case AG_ANG:
+                tap_code16(KC_A);
+                clear_mods();
+                SEND_STRING("ng");
+                break;
+            case EG_ENG:
+                tap_code16(KC_E);
+                clear_mods();
+                SEND_STRING("ng");
+                break;
+            case EX_EXC:
+                tap_code16(KC_E);
+                clear_mods();
+                SEND_STRING("xc");
+                break;
+            case IG_ING:
+                tap_code16(KC_I);
+                clear_mods();
+                SEND_STRING("ng");
+                break;
+            case IK_ITY:
+                tap_code16(KC_I);
+                clear_mods();
+                SEND_STRING("ty");
+                break;
+            case NC_NCE:
+                tap_code16(KC_N);
+                clear_mods();
+                SEND_STRING("ce");
+                break;
+            case NH_NCH:
+                tap_code16(KC_N);
+                clear_mods();
+                SEND_STRING("ch");
+                break;
+            case IN_N_T:
+                tap_code16(KC_N);
+                clear_mods();
+                SEND_STRING("'t");
+                break;
+            case OG_ONG:
+                tap_code16(KC_O);
+                clear_mods();
+                SEND_STRING("ng");
+                break;
+            case UG_UNG:
+                tap_code16(KC_U);
+                clear_mods();
+                SEND_STRING("ng");
+                break;
+            case WY_WHY:
+                tap_code16(KC_W);
+                clear_mods();
+                SEND_STRING("hy");
+                break;
+            // 4-grams
+            case AH_AUGH:
+                tap_code16(KC_A);
+                clear_mods();
+                SEND_STRING("ugh");
+                break;
+            case AV_AVER:
+                tap_code16(KC_A);
+                clear_mods();
+                SEND_STRING("ver");
+                break;
+            case CR_CESS:
+                tap_code16(KC_C);
+                clear_mods();
+                SEND_STRING("ess");
+                break;
+            case EV_EVER:
+                tap_code16(KC_E);
+                clear_mods();
+                SEND_STRING("ver");
+                break;
+            case FX_FROM:
+                tap_code16(KC_F);
+                clear_mods();
+                SEND_STRING("rom");
+                break;
+            case HR_HERE:
+                tap_code16(KC_H);
+                clear_mods();
+                SEND_STRING("ere");
+                break;
+            case HV_HAVE:
+                tap_code16(KC_H);
+                clear_mods();
+                SEND_STRING("ave");
+                break;
+            case IT_IGHT:
+                tap_code16(KC_I);
+                clear_mods();
+                SEND_STRING("ght");
+                break;
+            case IV_IVER:
+                tap_code16(KC_I);
+                clear_mods();
+                SEND_STRING("ver");
+                break;
+            case LR_LESS:
+                tap_code16(KC_L);
+                clear_mods();
+                SEND_STRING("ess");
+                break;
+            case MT_MENT:
+                tap_code16(KC_M);
+                clear_mods();
+                SEND_STRING("ent");
+                break;
+            case NR_NESS:
+                tap_code16(KC_N);
+                clear_mods();
+                SEND_STRING("ess");
+                break;
+            case OH_OUGH:
+                tap_code16(KC_O);
+                clear_mods();
+                SEND_STRING("ugh");
+                break;
+            case OD_OULD:
+                tap_code16(KC_O);
+                clear_mods();
+                SEND_STRING("uld");
+                break;
+            case OV_OVER:
+                tap_code16(KC_O);
+                clear_mods();
+                SEND_STRING("ver");
+                break;
+            case SI_SEMI:
+                tap_code16(KC_S);
+                clear_mods();
+                SEND_STRING("emi");
+                break;
+            case SD_SOME:
+                tap_code16(KC_S);
+                clear_mods();
+                SEND_STRING("ome");
+                break;
+            case SL_SELF:
+                tap_code16(KC_S);
+                clear_mods();
+                SEND_STRING("elf");
+                break;
+            case SP_SHIP:
+                tap_code16(KC_S);
+                clear_mods();
+                SEND_STRING("hip");
+                break;
+            case TE_TIME:
+                tap_code16(KC_T);
+                clear_mods();
+                SEND_STRING("ime");
+                break;
+            case TN_TION:
+                tap_code16(KC_T);
+                clear_mods();
+                SEND_STRING("ion");
+                break;
+            case WA_WARD:
+                tap_code16(KC_W);
+                clear_mods();
+                SEND_STRING("ard");
+                break;
+            case WI_WITH:
+                tap_code16(KC_W);
+                clear_mods();
+                SEND_STRING("ith");
+                break;
+            case WO_WORD:
+                tap_code16(KC_W);
+                clear_mods();
+                SEND_STRING("ord");
+                break;
+            case WT_WHAT:
+                tap_code16(KC_W);
+                clear_mods();
+                SEND_STRING("hat");
+                break;
+            case WN_WHEN:
+                tap_code16(KC_W);
+                clear_mods();
+                SEND_STRING("hen");
+                break;
+            case WX_WERE:
+                tap_code16(KC_W);
+                clear_mods();
+                SEND_STRING("ere");
+                break;
+            // 5-grams
+            case AM_ACCOM:
+                tap_code16(KC_A);
+                clear_mods();
+                SEND_STRING("ccom");
+                break;
+            case IEG_INGLE:
+                tap_code16(KC_I);
+                clear_mods();
+                SEND_STRING("ngle");
+                break;
+            case MJ_MULTI:
+                tap_code16(KC_M);
+                clear_mods();
+                SEND_STRING("ulti");
+                break;
+            case OL_OLOGY:
+                tap_code16(KC_O);
+                clear_mods();
+                SEND_STRING("logy");
+                break;
+            case OR_OTHER:
+                tap_code16(KC_O);
+                clear_mods();
+                SEND_STRING("ther");
+                break;
+            case OT_OUGHT:
+                tap_code16(KC_O);
+                clear_mods();
+                SEND_STRING("ught");
+                break;
+            case RM_RECOM:
+                tap_code16(KC_R);
+                clear_mods();
+                SEND_STRING("ecom");
+                break;
+            case SR_SUPER:
+                tap_code16(KC_S);
+                clear_mods();
+                SEND_STRING("uper");
+                break;
+            case TA_TRANS:
+                tap_code16(KC_T);
+                clear_mods();
+                SEND_STRING("rans");
+                break;
+            case TR_THERE:
+                tap_code16(KC_T);
+                clear_mods();
+                SEND_STRING("here");
+                break;
+            case TG_THING:
+                tap_code16(KC_T);
+                clear_mods();
+                SEND_STRING("hing");
+                break;
+            case UR_UNDER:
+                tap_code16(KC_U);
+                clear_mods();
+                SEND_STRING("nder");
+                break;
+            case WC_WHICH:
+                tap_code16(KC_W);
+                clear_mods();
+                SEND_STRING("hich");
+                break;
+            case WR_WHERE:
+                tap_code16(KC_W);
+                clear_mods();
+                SEND_STRING("here");
+                break;
+            // 6-grams
+            case NA_NATION:
+                tap_code16(KC_N);
+                clear_mods();
+                SEND_STRING("ation");
+                break;
+            case PE_PEOPLE:
+                tap_code16(KC_P);
+                clear_mods();
+                SEND_STRING("eople");
+                break;
+            // 7-grams
+            case UM_UNACCOM:
+                tap_code16(KC_U);
+                clear_mods();
+                SEND_STRING("naccom");
+                break;
+            // Pronouns
+            case ID_ID:
+                register_code(KC_LSFT);
+                tap_code16(KC_I);
+                clear_mods();
+                SEND_STRING("'d");
+                break;
+            case IE_IVE:
+                register_code(KC_LSFT);
+                tap_code16(KC_I);
+                clear_mods();
+                SEND_STRING("'ve");
+                break;
+            case IL_ILL:
+                register_code(KC_LSFT);
+                tap_code16(KC_I);
+                clear_mods();
+                SEND_STRING("'ll");
+                break;
+            case IM_IM:
+                register_code(KC_LSFT);
+                tap_code16(KC_I);
+                clear_mods();
+                SEND_STRING("'m");
+                break;
+            case MS_MYSELF:
+                tap_code16(KC_M);
+                SEND_STRING("yself");
+                break;
+            case TD_THEYD:
+                tap_code16(KC_T);
+                clear_mods();
+                SEND_STRING("hey'd");
+                break;
+            case TJ_THEYRE:
+                tap_code16(KC_T);
+                clear_mods();
+                SEND_STRING("hey're");
+                break;
+            case TL_THEYLL:
+                tap_code16(KC_T);
+                clear_mods();
+                SEND_STRING("hey'll");
+                break;
+            case TV_THEYVE:
+                tap_code16(KC_T);
+                clear_mods();
+                SEND_STRING("hey've");
+                break;
+            case TX_THEIR:
+                tap_code16(KC_T);
+                clear_mods();
+                SEND_STRING("heir");
+                break;
+            case TY_THEY:
+                tap_code16(KC_T);
+                clear_mods();
+                SEND_STRING("hey");
+                break;
+            case MD_THEM:
+                tap_code16(KC_T);
+                clear_mods();
+                SEND_STRING("hem");
+                break;
+            case TS_THEMSELVES:
+                tap_code16(KC_T);
+                clear_mods();
+                SEND_STRING("hemselves");
+                break;
+            case WD_WED:
+                tap_code16(KC_W);
+                clear_mods();
+                SEND_STRING("e'd");
+                break;
+            case WJ_WERE:
+                tap_code16(KC_W);
+                clear_mods();
+                SEND_STRING("e're");
+                break;
+            case WL_WELL:
+                tap_code16(KC_W);
+                clear_mods();
+                SEND_STRING("e'll");
+                break;
+            case WV_WEVE:
+                tap_code16(KC_W);
+                clear_mods();
+                SEND_STRING("e've");
+                break;
+            case OS_OURSELVES:
+                tap_code16(KC_O);
+                clear_mods();
+                SEND_STRING("urselves");
+                break;
+            case YD_YOUD:
+                tap_code16(KC_Y);
+                clear_mods();
+                SEND_STRING("ou'd");
+                break;
+            case YJ_YOURE:
+                tap_code16(KC_Y);
+                clear_mods();
+                SEND_STRING("ou're");
+                break;
+            case YL_YOULL:
+                tap_code16(KC_Y);
+                clear_mods();
+                SEND_STRING("ou'll");
+                break;
+            case YV_YOUVE:
+                tap_code16(KC_Y);
+                clear_mods();
+                SEND_STRING("ou've");
+                break;
+            case YX_YOUR:
+                tap_code16(KC_Y);
+                clear_mods();
+                SEND_STRING("our");
+                break;
+            case YF_YOURSELF:
+                tap_code16(KC_Y);
+                clear_mods();
+                SEND_STRING("ourself");
+                break;
+            case YS_YOURSELVES:
+                tap_code16(KC_Y);
+                clear_mods();
+                SEND_STRING("ourselves");
                 break;
         }
     }
