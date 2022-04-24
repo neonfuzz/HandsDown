@@ -6,6 +6,9 @@ static uint32_t linger_keydown = 0;
 static bool     linger_shift   = false;
 
 void enable_linger_shift(void) {
+    if (capsword_active) {
+        capsword_unset();
+    }
     register_code(KC_RSFT);
     linger_shift = true;
 }
@@ -23,7 +26,7 @@ bool process_linger_user(uint16_t keycode, const keyrecord_t *record) {
         case KC_C:    // COM if lingered
         case KC_K:    // KE if lingered
         case KC_Q:    // QU if lingered
-        case KC_LABK: // <|> if lingered
+        case LABK:    // <|> if lingered
         case KC_LBRC: // [|] if lingered
         case KC_LCBR: // {|} if lingered
         case KC_LPRN: // (|) if lingered
@@ -72,7 +75,7 @@ void matrix_linger_user(void) {
                 clear_mods();
                 tap_code(KC_U);
                 break;
-            case KC_LABK:
+            case LABK:
                 clear_mods();
                 tap_code16(KC_RABK);
                 tap_code16(KC_LEFT);
@@ -106,6 +109,9 @@ void matrix_linger_user(void) {
             case KC_DOT:
             case KC_QUES:
                 // Also handles KC_EXLM.
+                if (capsword_active) {
+                    capsword_unset();
+                }
                 tap_code(KC_SPC);
                 enable_linger_shift();
                 break;

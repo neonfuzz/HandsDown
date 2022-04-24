@@ -34,5 +34,8 @@ uint32_t layer_state_set_user(uint32_t state) {
         default:
             break;
     }
+    if (capsword_active) {
+        ergodox_right_led_1_on();
+    }
     return state;
 };

@@ -34,6 +34,11 @@
 #undef MOUSEKEY_TIME_TO_MAX
 #define MOUSEKEY_TIME_TO_MAX 45
 
+// Define unicode version(s).
+#define UNICODE_SELECTED_MODES UC_LNX, UC_WINC
+// Always start with unicode Linux.
+#define UNICODE_CYCLE_PERSIST false
+
 // Milliseconds to pause after sending wakeup packet.
 #define USB_SUSPEND_WAKEUP_DELAY 0
 

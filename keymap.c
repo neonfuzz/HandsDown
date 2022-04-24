@@ -12,6 +12,8 @@ enum layer_names {
 
 #include QMK_KEYBOARD_H
 #include "version.h"
+#include "capsword.c"
+#include "macros.c"
 #include "combos.c"
 #include "leds.c"
 #include "linger.c"
@@ -44,21 +46,21 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 
     [_HDGOLD] = LAYOUT_ergodox(
         // left hand
-        KC_PAUS, _______     , _______     , _______     , _______     , _______, _______,
-        _______, KC_J        , KC_G        , KC_M        , KC_P        , KC_V   , _______,
-        _______, LCTL_T(KC_R), LGUI_T(KC_S), LALT_T(KC_N), LSFT_T(KC_D), KC_B   ,
-        _______, KC_X        , KC_F        , KC_L        , KC_C        , KC_W   , KC_HYPR,
-        _______, _______     , _______     , _______     , TT(5)       ,
+        C(KC_S)   , HEART       , HEARTEYES   , SHADES      , GRIN        , UPSIDED, SHRUG  ,
+        C(KC_W)   , KC_J        , KC_G        , KC_M        , KC_P        , KC_V   , _______,
+        C(KC_Q)   , LCTL_T(KC_R), LGUI_T(KC_S), LALT_T(KC_N), LSFT_T(KC_D), KC_B   ,
+        C(S(KC_Z)), KC_X        , KC_F        , KC_L        , KC_C        , KC_W   , KC_MEH ,
+        C(KC_A)   , C(KC_C)     , C(KC_V)     , C(KC_Z)     , TT(5)       ,
         // left thumb
                      KC_ESC , OSL(6) ,
                               _______,
         LT(2, KC_T), MO(1)  , MO(3)  ,
         // right hand
-        _______, _______, _______     , _______     , _______     , _______     , _______,
-        _______, KC_COLN, KC_DOT      , KC_SLASH    , KC_QUOT     , KC_QUES     , _______,
-                 KC_COMM, RSFT_T(KC_A), RALT_T(KC_E), RGUI_T(KC_I), RCTL_T(KC_H), _______,
-        KC_MEH , KC_UNDS, KC_U        , KC_O        , KC_Y        , KC_K        , _______,
-                          KC_ENT      , _______     , _______     , _______     , _______,
+        IMP    , TPANDA , HARSE       , GOAT        , BCAT        , DOG         , VIMSAVE    ,
+        _______, KC_COLN, KC_DOT      , KC_SLASH    , KC_QUOT     , KC_QUES     , VIMSAVEQUIT,
+                 KC_COMM, RSFT_T(KC_A), RALT_T(KC_E), RGUI_T(KC_I), RCTL_T(KC_H), VIMQUIT    ,
+        KC_HYPR, KC_UNDS, KC_U        , KC_O        , KC_Y        , KC_K        , C(KC_R)    ,
+                          KC_ENT      , KC_U        , VIMPASTE    , VIMCOPY     , VIMALL     ,
         // right thumb
         OSL(6) , KC_TAB ,
         KC_PAUS,
@@ -68,7 +70,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     [_SYMBOLS] = LAYOUT_ergodox(
         // left hand
         _______, _______, KC_CIRC, KC_HASH, KC_DLR , _______, _______,
-        _______, _______, KC_LABK, KC_MINS, KC_RABK, _______, _______,
+        _______, _______, LABK   , KC_MINS, KC_RABK, _______, _______,
         _______, KC_BSLS, KC_LPRN, KC_EQL , KC_RPRN, KC_PLUS,
         _______, _______, KC_ASTR, KC_COLN, KC_SLSH, _______, _______,
         _______, _______, _______, _______, _______,
@@ -184,18 +186,18 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
         // left hand
         _______, _______, _______, _______, _______, _______, _______,
         _______, _______, _______, _______, _______, _______, _______,
-        _______, _______, _______, _______, _______, _______,
+        _______, RTM    , ESZETT , NTILDE , _______, _______,
         _______, _______, _______, _______, _______, _______, _______,
         _______, _______, _______, _______, _______,
         // left thumb
-                 _______, TO(0)  ,
-                          _______,
-        _______, _______, _______,
+            _______, TO(0)  ,
+                     _______,
+        TM, _______, _______,
         // right hand
         _______, _______, _______, _______, _______, _______, _______,
-        _______, _______, _______, _______, _______, _______, _______,
-                 _______, _______, _______, _______, _______, _______,
-        _______, _______, _______, _______, _______, _______, _______,
+        _______, _______, _______, _______, KC_GRV , UPQUEST, _______,
+                 _______, AACCENT, EACCENT, IACCENT, _______, _______,
+        _______, _______, UACCENT, OACCENT, _______, _______, _______,
                           _______, _______, _______, _______, _______,
         // right thumb
         TO(0)  , TO(7)  ,

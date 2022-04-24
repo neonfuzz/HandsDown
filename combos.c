@@ -98,6 +98,8 @@ enum combos {
     YX_YOUR,
     YF_YOURSELF,
     YS_YOURSELVES,
+    // Macros
+    DA_CAPS,
     // Automatically count the number of combos.
     COMBO_LENGTH
 };
@@ -210,6 +212,9 @@ const uint16_t PROGMEM your_combo[]       = {KC_Y, KC_X, COMBO_END};
 const uint16_t PROGMEM yourself_combo[]   = {KC_Y, KC_F, COMBO_END};
 const uint16_t PROGMEM yourselves_combo[] = {KC_Y, LGUI_T(KC_S), COMBO_END};
 
+// Macros
+const uint16_t PROGMEM caps_combo[] = {LSFT_T(KC_D), RSFT_T(KC_A), COMBO_END};
+
 // ----------------------------
 // Map combos to their results.
 // ----------------------------
@@ -310,6 +315,8 @@ combo_t key_combos[] = {
     [YX_YOUR]       = COMBO_ACTION(your_combo),
     [YF_YOURSELF]   = COMBO_ACTION(yourself_combo),
     [YS_YOURSELVES] = COMBO_ACTION(yourselves_combo),
+    // Macros
+    [DA_CAPS] = COMBO(caps_combo, CAPSWRD),
 };
 
 // --------------------------------------
