@@ -7,16 +7,22 @@
 #undef TAPPING_TERM
 #define TAPPING_TERM 180
 
+// Tap & Hold keys trigger the hold if another key
+// is pressed before releasing, even if it hasn't
+// hit the `TAPPING_TERM`.
+#define PERMISSIVE_HOLD
+
+// Combo definitions.
+#define COMBO_STRICT_TIMER
+#define EXTRA_SHORT_COMBOS
+#undef COMBO_TERM
+#define COMBO_TERM (TAPPING_TERM/5)
+
 // Mouse mode settings.
 #undef MOUSEKEY_MAX_SPEED
 #define MOUSEKEY_MAX_SPEED 6
 #undef MOUSEKEY_TIME_TO_MAX
 #define MOUSEKEY_TIME_TO_MAX 45
-
-// Tap & Hold keys trigger the hold if another key
-// is pressed before releasing, even if it hasn't
-// hit the `TAPPING_TERM`.
-#define PERMISSIVE_HOLD
 
 // Milliseconds to pause after sending wakeup packet.
 #define USB_SUSPEND_WAKEUP_DELAY 0
