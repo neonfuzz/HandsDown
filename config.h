@@ -21,6 +21,9 @@
 // Adaptive definitions.
 #define ADAPTIVE_TERM (TAPPING_TERM*1.1)
 
+// Linger definitions.
+#define LINGER_TERM (TAPPING_TERM*3/5)
+
 // Mouse mode settings.
 #undef MOUSEKEY_MAX_SPEED
 #define MOUSEKEY_MAX_SPEED 6

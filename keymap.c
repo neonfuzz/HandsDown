@@ -1,7 +1,8 @@
 #include QMK_KEYBOARD_H
 #include "version.h"
-#include "adaptive.c"
 #include "combos.c"
+#include "linger.c"
+#include "adaptive.c"
 #include "overrides.c"
 #include "MATRIX_SCAN.c"
 #include "PROCESS_RECORD.c"
