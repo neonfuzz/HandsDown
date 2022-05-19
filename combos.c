@@ -26,6 +26,7 @@ enum combos {
     WY_WHY,
     // 4-grams
     AH_AUGH,
+    AU_AUTO,
     AV_AVER,
     CR_CESS,
     EV_EVER,
@@ -48,6 +49,7 @@ enum combos {
     TN_TION,
     WA_WARD,
     WI_WITH,
+    WK_WORK,
     WO_WORD,
     WT_WHAT,
     WN_WHEN,
@@ -135,6 +137,7 @@ const uint16_t PROGMEM why_combo[] = {KC_W, KC_Y, COMBO_END};
 
 // 4-grams
 const uint16_t PROGMEM augh_combo[]  = {RSFT_T(KC_A), RCTL_T(KC_H), COMBO_END};
+const uint16_t PROGMEM auto_combo[]  = {RSFT_T(KC_A), KC_COMM, COMBO_END};
 const uint16_t PROGMEM aver_combo[]  = {RSFT_T(KC_A), KC_V, COMBO_END};
 const uint16_t PROGMEM cess_combo[]  = {KC_C, LCTL_T(KC_R), COMBO_END};
 const uint16_t PROGMEM ever_combo[]  = {RALT_T(KC_E), KC_V, COMBO_END};
@@ -157,6 +160,7 @@ const uint16_t PROGMEM time_combo[]  = {LT(2, KC_T), RALT_T(KC_E), COMBO_END};
 const uint16_t PROGMEM tion_combo[]  = {LT(2, KC_T), LALT_T(KC_N), COMBO_END};
 const uint16_t PROGMEM ward_combo[]  = {KC_W, RSFT_T(KC_A), COMBO_END};
 const uint16_t PROGMEM with_combo[]  = {KC_W, RGUI_T(KC_I), COMBO_END};
+const uint16_t PROGMEM work_combo[]  = {KC_W, KC_K, COMBO_END};
 const uint16_t PROGMEM word_combo[]  = {KC_W, KC_O, COMBO_END};
 const uint16_t PROGMEM what_combo[]  = {KC_W, LT(2, KC_T), COMBO_END};
 const uint16_t PROGMEM when_combo[]  = {KC_W, LALT_T(KC_N), COMBO_END};
@@ -243,6 +247,7 @@ combo_t key_combos[] = {
     [WY_WHY] = COMBO_ACTION(why_combo),
     // 4-grams
     [AH_AUGH] = COMBO_ACTION(augh_combo),
+    [AU_AUTO] = COMBO_ACTION(auto_combo),
     [AV_AVER] = COMBO_ACTION(aver_combo),
     [CR_CESS] = COMBO_ACTION(cess_combo),
     [EV_EVER] = COMBO_ACTION(ever_combo),
@@ -265,6 +270,7 @@ combo_t key_combos[] = {
     [TN_TION] = COMBO_ACTION(tion_combo),
     [WA_WARD] = COMBO_ACTION(ward_combo),
     [WI_WITH] = COMBO_ACTION(with_combo),
+    [WK_WORK] = COMBO_ACTION(work_combo),
     [WO_WORD] = COMBO_ACTION(word_combo),
     [WT_WHAT] = COMBO_ACTION(what_combo),
     [WN_WHEN] = COMBO_ACTION(when_combo),
@@ -418,6 +424,11 @@ void process_combo_event(uint16_t combo_index, bool pressed) {
                 clear_mods();
                 SEND_STRING("ugh");
                 break;
+            case AU_AUTO:
+                tap_code16(KC_A);
+                clear_mods();
+                SEND_STRING("uto");
+                break;
             case AV_AVER:
                 tap_code16(KC_A);
                 clear_mods();
@@ -527,6 +538,11 @@ void process_combo_event(uint16_t combo_index, bool pressed) {
                 tap_code16(KC_W);
                 clear_mods();
                 SEND_STRING("ith");
+                break;
+            case WK_WORK:
+                tap_code16(KC_W);
+                clear_mods();
+                SEND_STRING("ork");
                 break;
             case WO_WORD:
                 tap_code16(KC_W);

@@ -25,6 +25,7 @@ bool process_linger_user(uint16_t keycode, const keyrecord_t *record) {
     switch (keycode) {
         case KC_C:    // COM if lingered
         case KC_K:    // KE if lingered
+        case KC_O:    // OWN if lingered
         case KC_Q:    // QU if lingered
         case LABK:    // <|> if lingered
         case KC_LBRC: // [|] if lingered
@@ -70,6 +71,10 @@ void matrix_linger_user(void) {
             case KC_K:
                 clear_mods();
                 tap_code(KC_E);
+                break;
+            case KC_O:
+                clear_mods();
+                send_string("wn");
                 break;
             case KC_Q:
                 clear_mods();
