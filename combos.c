@@ -342,6 +342,18 @@ void cap_i(void) {
 
 void process_combo_event(uint16_t combo_index, bool pressed) {
     if (pressed) {
+        switch (prior_keycode) {
+            case KC_D:
+            case KC_P:
+            case KC_COMM:
+                set_mods(prior_saved_mods);
+                tap_code16(prior_keycode);
+                clear_mods();
+                prior_saved_mods = 0;
+                prior_keycode    = KC_NO;
+                prior_keydown    = 0;
+                break;
+        }
         switch (combo_index) {
             // H-digraphs
             case DN_TH:
