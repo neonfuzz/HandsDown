@@ -125,7 +125,7 @@ bool process_adaptive_user(uint16_t keycode, const keyrecord_t *record) {
                             break;
                     }
                     break;
-                case KC_COMM:
+                case KC_COMM: // ,A -> UA
                     switch (keycode) {
                         case KC_A:
                             return_state = false;
@@ -133,7 +133,12 @@ bool process_adaptive_user(uint16_t keycode, const keyrecord_t *record) {
                             second       = KC_A;
                             break;
                         default:
-                            tap_code(prior_keycode);
+                            // Manually handle KC_COMM -> KC_PIPE.
+                            if (prior_saved_mods & MOD_MASK_SHIFT) {
+                                tap_code16(KC_PIPE);
+                            } else {
+                                tap_code(prior_keycode);
+                            }
                     }
                     break;
                 case KC_DOT: // .: -> .com
