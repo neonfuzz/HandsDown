@@ -121,19 +121,19 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
         _______, _______, _______, _______, _______, _______, _______,
         _______, _______, _______, _______, _______,
         // left thumb
-                 _______, KC_VOLU,
-                          KC_VOLD,
-        _______, _______, _______,
+                      _______, KC_VOLU,
+                               KC_VOLD,
+        C(A(KC_DEL)), _______, _______,
         // right hand
         _______, _______   , _______    , _______    , _______    , _______, _______,
         _______, _______   , KC_F7      , KC_F8      , KC_F9      , _______, _______,
                  A(KC_SCRL), KC_SCRL    , KC_F1      , KC_F2      , KC_F3  , _______,
-        _______, _______   , KC_F4      , KC_F5      , KC_F6      , _______, _______,
+        KC_CAPS, _______   , KC_F4      , KC_F5      , KC_F6      , _______, _______,
                              C(A(KC_F1)), C(A(KC_F2)), C(A(KC_F3)), _______, _______,
         // right thumb
         _______, _______,
         _______,
-        RESET  , _______, _______
+        RESET  , _______, UC_MOD
     ),
 
     [_MOUSE] = LAYOUT_ergodox(
@@ -171,11 +171,11 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
                           _______,
         _______, _______, _______,
         // right hand
-        _______, KC_6   , KC_7   , KC_8   , KC_9   , KC_0   , _______,
-        _______, _______, KC_PGUP, KC_UP  , KC_HOME, _______, _______,
-                 _______, KC_LEFT, KC_DOWN, KC_RGHT, _______, _______,
-        _______, _______, KC_PGDN, KC_DOWN, KC_END , _______, _______,
-                          _______, _______, _______, _______, _______,
+        _______, KC_6      , KC_7   , KC_8   , KC_9   , KC_0      , _______,
+        _______, _______   , KC_PGUP, KC_UP  , KC_HOME, _______   , _______,
+                 C(KC_LEFT), KC_LEFT, KC_DOWN, KC_RGHT, C(KC_RGHT), _______,
+        _______, _______   , KC_PGDN, KC_DOWN, KC_END , _______   , _______,
+                             _______, _______, _______, _______   , _______,
         // right thumb
         TO(0)  , _______,
         _______,
@@ -202,7 +202,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
         // right thumb
         TO(0)  , TO(7)  ,
         TO(8)  ,
-        _______, _______, UC_MOD
+        _______, _______, _______
     ),
 
     [_QWERTY] = LAYOUT_ergodox(
