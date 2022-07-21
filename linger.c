@@ -7,7 +7,7 @@ static bool     linger_shift   = false;
 
 void enable_linger_shift(void) {
     if (capsword_active) {
-        capsword_unset();
+        caps_unset();
     }
     register_code(KC_RSFT);
     linger_shift = true;
@@ -115,7 +115,7 @@ void matrix_linger_user(void) {
             case KC_QUES:
                 // Also handles KC_EXLM.
                 if (capsword_active) {
-                    capsword_unset();
+                    caps_unset();
                 }
                 tap_code(KC_SPC);
                 enable_linger_shift();

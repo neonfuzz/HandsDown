@@ -12,7 +12,7 @@ enum layer_names {
 
 #include QMK_KEYBOARD_H
 #include "version.h"
-#include "capsword.c"
+#include "caps.c"
 #include "macros.c"
 #include "combos.c"
 #include "leds.c"
@@ -128,7 +128,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
         _______, _______   , _______    , _______    , _______    , _______, _______,
         _______, _______   , KC_F7      , KC_F8      , KC_F9      , _______, _______,
                  A(KC_SCRL), KC_SCRL    , KC_F1      , KC_F2      , KC_F3  , _______,
-        KC_CAPS, _______   , KC_F4      , KC_F5      , KC_F6      , _______, _______,
+        ALLCAPS, _______   , KC_F4      , KC_F5      , KC_F6      , _______, _______,
                              C(A(KC_F1)), C(A(KC_F2)), C(A(KC_F3)), _______, _______,
         // right thumb
         _______, _______,

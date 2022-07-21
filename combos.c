@@ -328,6 +328,18 @@ combo_t key_combos[] = {
 // --------------------------------------
 // Define results for complicated combos.
 // --------------------------------------
+
+// Capital "I", whether in capslock or not.
+void cap_i(void) {
+    if (caps_lock) {
+        tap_code16(KC_I);
+    } else {
+        register_code(KC_LSFT);
+        tap_code16(KC_I);
+        clear_mods();
+    }
+}
+
 void process_combo_event(uint16_t combo_index, bool pressed) {
     if (pressed) {
         switch (combo_index) {
@@ -654,27 +666,19 @@ void process_combo_event(uint16_t combo_index, bool pressed) {
                 break;
             // Pronouns
             case ID_ID:
-                register_code(KC_LSFT);
-                tap_code16(KC_I);
-                clear_mods();
+                cap_i();
                 SEND_STRING("'d");
                 break;
             case IE_IVE:
-                register_code(KC_LSFT);
-                tap_code16(KC_I);
-                clear_mods();
+                cap_i();
                 SEND_STRING("'ve");
                 break;
             case IL_ILL:
-                register_code(KC_LSFT);
-                tap_code16(KC_I);
-                clear_mods();
+                cap_i();
                 SEND_STRING("'ll");
                 break;
             case IM_IM:
-                register_code(KC_LSFT);
-                tap_code16(KC_I);
-                clear_mods();
+                cap_i();
                 SEND_STRING("'m");
                 break;
             case MS_MYSELF:

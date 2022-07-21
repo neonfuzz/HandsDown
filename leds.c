@@ -5,7 +5,7 @@ uint32_t layer_state_set_user(uint32_t state) {
     ergodox_right_led_2_off();
     ergodox_right_led_3_off();
     switch (layer) {
-        // R.. = capsword
+        // R.. = caps
         case _SYMBOLS:
             ergodox_right_led_2_on();
             break;
@@ -34,7 +34,7 @@ uint32_t layer_state_set_user(uint32_t state) {
         default:
             break;
     }
-    if (capsword_active) {
+    if (capsword_active || allcaps_active) {
         ergodox_right_led_1_on();
     }
     return state;
