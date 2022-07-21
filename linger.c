@@ -33,6 +33,7 @@ bool process_linger_user(uint16_t keycode, const keyrecord_t *record) {
         case KC_LPRN: // (|) if lingered
         case KC_QUOT: // '|' if lingered
         case KC_DQUO: // "|" if lingered
+        case KC_ASTR: // *|* if lingered
         case KC_DOT:  // (dot)(space)(shift) if lingered
         case KC_QUES: // ?(space)(shift) if lingered
             if (record->event.pressed) {
@@ -110,6 +111,12 @@ void matrix_linger_user(void) {
             case KC_DQUO:
                 tap_code16(KC_DQUO);
                 // "LEFT" is handled by the "QUOTE" case.
+                break;
+            case KC_ASTR:
+                tap_code16(KC_ASTR);
+                clear_mods();
+                tap_code16(KC_LEFT);
+                set_mods(mods);
                 break;
             case KC_DOT:
             case KC_QUES:
