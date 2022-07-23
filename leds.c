@@ -17,6 +17,13 @@ uint32_t layer_state_set_user(uint32_t state) {
             ergodox_right_led_1_on();
             ergodox_right_led_2_on();
             break;
+        case _EMOJI:
+            ergodox_right_led_1_on();
+            ergodox_right_led_2_on();
+            if (unicode_config.input_mode != UC_LNX) {
+                ergodox_right_led_3_on();
+            }
+            break;
         case _MOUSE:
             ergodox_right_led_1_on();
             ergodox_right_led_3_on();

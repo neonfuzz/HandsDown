@@ -9,18 +9,26 @@ enum custom_keycodes {
     VIMSAVEQUIT,
     VIMQUIT,
     // emoji
-    HEART,     // 💜
-    HEARTEYES, // 😍
-    SHADES,    // 😎
-    GRIN,      // 😁
-    UPSIDED,   // 🙃
-    SHRUG,     // 🤷
-    IMP,       // 😈
-    TPANDA,    // 🦝
-    HARSE,     // 🐎
-    GOAT,      // 🐐
-    BCAT,      // 🐈‍⬛
-    DOG,       // 🐕️
+    IMP,        // 😈
+    HEART,      // 💜
+    HEARTEYES,  // 😍
+    HEARTHANDS, // 🫶
+    GRIN,       // 😁
+    BLUSH,      // 😊
+    TONGUE,     // 😛
+    XTONGUE,    // 😝
+    SHADES,     // 😎
+    SLANT,      // 🫤
+    UPSIDED,    // 🙃
+    MELT,       // 🫠
+    LAUGHCRY,   // 😅
+    SHRUG,      // 🤷
+    HARSE,      // 🐎
+    GOAT,       // 🐐
+    BCAT,       // 🐈‍⬛
+    DOG,        // 🐕️
+    TPANDA,     // 🦝
+    UCMOD,      // UC_MOD with LED support
     // special characters
     AACCENT, // á
     EACCENT, // é
@@ -70,29 +78,47 @@ bool process_macro_user(uint16_t keycode, const keyrecord_t *record) {
                 tap_code16(KC_ENT);
                 return false;
             // Emoji
+            case IMP:
+                send_unicode_string("😈");
+                return false;
             case HEART:
                 send_unicode_string("💜");
                 return false;
             case HEARTEYES:
                 send_unicode_string("😍");
                 return false;
-            case SHADES:
-                send_unicode_string("😎");
+            case HEARTHANDS:
+                send_unicode_string("🫶");
                 return false;
             case GRIN:
                 send_unicode_string("😁");
                 return false;
+            case BLUSH:
+                send_unicode_string("😊");
+                return false;
+            case TONGUE:
+                send_unicode_string("😛");
+                return false;
+            case XTONGUE:
+                send_unicode_string("😝");
+                return false;
+            case SHADES:
+                send_unicode_string("😎");
+                return false;
+            case SLANT:
+                send_unicode_string("🫤");
+                return false;
             case UPSIDED:
                 send_unicode_string("🙃");
                 return false;
+            case MELT:
+                send_unicode_string("🫠");
+                return false;
+            case LAUGHCRY:
+                send_unicode_string("😅");
+                return false;
             case SHRUG:
                 send_unicode_string("🤷");
-                return false;
-            case IMP:
-                send_unicode_string("😈");
-                return false;
-            case TPANDA:
-                send_unicode_string("🦝");
                 return false;
             case HARSE:
                 send_unicode_string("🐎");
@@ -105,6 +131,17 @@ bool process_macro_user(uint16_t keycode, const keyrecord_t *record) {
                 return false;
             case DOG:
                 send_unicode_string("🐕️");
+                return false;
+            case TPANDA:
+                send_unicode_string("🦝");
+                return false;
+            case UCMOD:
+                cycle_unicode_input_mode(1);
+                if (unicode_config.input_mode == UC_LNX) {
+                    ergodox_right_led_3_off();
+                } else {
+                    ergodox_right_led_3_on();
+                }
                 return false;
             // special characters
             case AACCENT:
