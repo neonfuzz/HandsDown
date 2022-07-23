@@ -51,11 +51,11 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
         C(KC_W)   , KC_J        , KC_G        , KC_M        , KC_P        , KC_V   , _______,
         C(KC_Q)   , LCTL_T(KC_R), LGUI_T(KC_S), LALT_T(KC_N), LSFT_T(KC_D), KC_B   ,
         C(S(KC_Z)), KC_X        , KC_F        , KC_L        , KC_C        , KC_W   , KC_MEH ,
-        C(KC_A)   , C(KC_C)     , C(KC_V)     , C(KC_Z)     , TT(5)       ,
+        C(KC_A)   , C(KC_C)     , C(KC_V)     , C(KC_Z)     , TT(_ARROW)       ,
         // left thumb
-                     KC_ESC , OSL(6),
-                              MO(9) ,
-        LT(2, KC_T), MO(1)  , MO(3) ,
+                           KC_ESC      , OSL(_INTERNATIONAL),
+                                         MO(_EMOJI)         ,
+        LT(_NUMPAD, KC_T), MO(_SYMBOLS), MO(_FKEYS)         ,
         // right hand
         _______, _______, _______     , _______     , _______     , _______     , VIMSAVE    ,
         _______, KC_COLN, KC_DOT      , KC_SLASH    , KC_QUOT     , KC_QUES     , VIMSAVEQUIT,
@@ -63,9 +63,9 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
         KC_HYPR, KC_UNDS, KC_U        , KC_O        , KC_Y        , KC_K        , C(KC_R)    ,
                           KC_ENT      , KC_U        , VIMPASTE    , VIMCOPY     , VIMALL     ,
         // right thumb
-        OSL(6) , KC_TAB ,
-        KC_PAUS,
-        TT(4)  , KC_BSPC, LT(1, KC_SPC)
+        OSL(_INTERNATIONAL), KC_TAB ,
+        KC_PAUS            ,
+        TT(_MOUSE)         , KC_BSPC, LT(_SYMBOLS, KC_SPC)
     ),
 
     [_SYMBOLS] = LAYOUT_ergodox(
@@ -201,9 +201,9 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
         _______, _______, UACCENT, OACCENT, _______, _______, _______,
                           _______, _______, _______, _______, _______,
         // right thumb
-        TO(0)  , TO(7)  ,
-        TO(8)  ,
-        _______, _______, _______
+        TO(0)      , TO(_QWERTY),
+        TO(_GAMING),
+        _______    , _______    , _______
     ),
 
     [_QWERTY] = LAYOUT_ergodox(
