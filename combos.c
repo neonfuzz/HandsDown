@@ -322,7 +322,7 @@ combo_t key_combos[] = {
     [YF_YOURSELF]   = COMBO_ACTION(yourself_combo),
     [YS_YOURSELVES] = COMBO_ACTION(yourselves_combo),
     // Macros
-    [DA_CAPS] = COMBO(caps_combo, CAPSWRD),
+    [DA_CAPS] = COMBO(caps_combo, CAPWRD),
 };
 
 // --------------------------------------

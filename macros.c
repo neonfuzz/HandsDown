@@ -1,6 +1,6 @@
 enum custom_keycodes {
     ALLCAPS = EZ_SAFE_RANGE,
-    CAPSWRD,
+    CAPWRD,
     LAMPOON,
     VIMALL,
     VIMCOPY,
@@ -50,7 +50,7 @@ bool process_macro_user(uint16_t keycode, const keyrecord_t *record) {
             case ALLCAPS:
                 allcaps_toggle();
                 return false;
-            case CAPSWRD:
+            case CAPWRD:
                 capsword_toggle();
                 return false;
             case LAMPOON:
