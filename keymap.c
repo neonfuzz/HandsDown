@@ -173,9 +173,9 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
         _______, _______, _______,
         // right hand
         _______, KC_6      , KC_7   , KC_8   , KC_9   , KC_0      , _______,
-        _______, _______   , KC_PGUP, KC_UP  , KC_HOME, _______   , _______,
+        _______, _______   , KC_PGUP, KC_UP  , KC_PGDN, _______   , _______,
                  C(KC_LEFT), KC_LEFT, KC_DOWN, KC_RGHT, C(KC_RGHT), _______,
-        _______, _______   , KC_PGDN, KC_DOWN, KC_END , _______   , _______,
+        _______, _______   , KC_HOME, KC_DOWN, KC_END , _______   , _______,
                              _______, _______, _______, _______   , _______,
         // right thumb
         TO(0)  , _______,
