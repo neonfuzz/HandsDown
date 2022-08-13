@@ -28,8 +28,8 @@ void caps_set(int mode) {
     if (!caps_lock) {
         tap_code(KC_CAPS);
         caps_lock = true;
-        ergodox_right_led_1_on();
     }
+    ergodox_right_led_1_on();
 }
 
 void caps_unset(void) {
@@ -39,8 +39,8 @@ void caps_unset(void) {
     if (caps_lock) {
         tap_code(KC_CAPS);
         caps_lock = false;
-        ergodox_right_led_1_off();
     }
+    ergodox_right_led_1_off();
 }
 
 void capsword_toggle(void) {
