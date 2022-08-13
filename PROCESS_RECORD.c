@@ -15,15 +15,15 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record) {
             break;
     }
 
-    if (!process_caps_user(keycode, record)) {
-        return false; // We have declared no more processing.
-    }
-
     if (!process_linger_user(keycode, record)) {
         return false; // We have declared no more processing.
     }
 
     if (!process_adaptive_user(keycode, record)) {
+        return false; // We have declared no more processing.
+    }
+
+    if (!process_caps_user(keycode, record)) {
         return false; // We have declared no more processing.
     }
 
