@@ -47,21 +47,21 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 
     [_HDGOLD] = LAYOUT_ergodox(
         // left hand
-        C(KC_S)   , _______     , _______     , _______     , _______     , _______, _______,
-        C(KC_W)   , KC_J        , KC_G        , KC_M        , KC_P        , KC_V   , _______,
-        C(KC_Q)   , LCTL_T(KC_R), LGUI_T(KC_S), LALT_T(KC_N), LSFT_T(KC_D), KC_B   ,
-        C(S(KC_Z)), KC_X        , KC_F        , KC_L        , KC_C        , KC_W   , KC_MEH ,
-        C(KC_A)   , C(KC_C)     , C(KC_V)     , C(KC_Z)     , TT(_ARROW)       ,
+        C(KC_S)   , C(KC_W)     , C(KC_Q)     , _______     , _______     , _______, _______,
+        _______   , KC_J        , KC_G        , KC_M        , KC_P        , KC_V   , _______,
+        C(S(KC_Z)), LCTL_T(KC_R), LGUI_T(KC_S), LALT_T(KC_N), LSFT_T(KC_D), KC_B   ,
+        C(KC_Z)   , KC_X        , KC_F        , KC_L        , KC_C        , KC_W   , KC_MEH ,
+        C(KC_A)   , C(KC_X)     , C(KC_C)     , C(KC_V)     , TT(_ARROW)       ,
         // left thumb
                            KC_ESC      , OSL(_INTERNATIONAL),
                                          MO(_EMOJI)         ,
         LT(_NUMPAD, KC_T), MO(_SYMBOLS), MO(_FKEYS)         ,
         // right hand
-        _______, _______, _______     , _______     , _______     , _______     , VIMSAVE    ,
-        _______, KC_COLN, KC_DOT      , KC_SLASH    , KC_QUOT     , KC_QUES     , VIMSAVEQUIT,
-                 KC_COMM, RSFT_T(KC_A), RALT_T(KC_E), RGUI_T(KC_I), RCTL_T(KC_H), VIMQUIT    ,
-        KC_HYPR, KC_UNDS, KC_U        , KC_O        , KC_Y        , KC_K        , C(KC_R)    ,
-                          KC_ENT      , KC_U        , VIMPASTE    , VIMCOPY     , VIMALL     ,
+        _______, _______, _______     , _______     , VIMQUIT     , VIMSAVEQUIT , VIMSAVE,
+        _______, KC_COLN, KC_DOT      , KC_SLASH    , KC_QUOT     , KC_QUES     , _______,
+                 KC_COMM, RSFT_T(KC_A), RALT_T(KC_E), RGUI_T(KC_I), RCTL_T(KC_H), C(KC_R),
+        KC_HYPR, KC_UNDS, KC_U        , KC_O        , KC_Y        , KC_K        , KC_U   ,
+                          KC_ENT      , VIMPASTE    , VIMCOPY     , VIMCUT      , VIMALL ,
         // right thumb
         OSL(_INTERNATIONAL), KC_TAB ,
         KC_PAUS            ,

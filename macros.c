@@ -4,6 +4,7 @@ enum custom_keycodes {
     TITLECASE,
     LAMPOON,
     VIMALL,
+    VIMCUT,
     VIMCOPY,
     VIMPASTE,
     VIMSAVE,
@@ -62,6 +63,9 @@ bool process_macro_user(uint16_t keycode, const keyrecord_t *record) {
                 return false;
             case VIMALL:
                 send_string("ggVG");
+                return false;
+            case VIMCUT:
+                send_string("\"+x");
                 return false;
             case VIMCOPY:
                 send_string("\"+y");
