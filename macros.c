@@ -25,6 +25,7 @@ enum custom_keycodes {
     MELT,       // 🫠
     LAUGHCRY,   // 😅
     SHRUG,      // 🤷
+    FPALM,      // 🤦
     HARSE,      // 🐎
     GOAT,       // 🐐
     BCAT,       // 🐈‍⬛
@@ -128,6 +129,8 @@ bool process_macro_user(uint16_t keycode, const keyrecord_t *record) {
             case SHRUG:
                 send_unicode_string("🤷");
                 return false;
+            case FPALM:
+                send_unicode_string("🤦");
             case HARSE:
                 send_unicode_string("🐎");
                 return false;
