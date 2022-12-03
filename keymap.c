@@ -126,11 +126,11 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
                                KC_VOLD,
         C(A(KC_DEL)), _______, _______,
         // right hand
-        _______, _______   , _______    , _______    , _______    , _______, _______,
-        _______, _______   , KC_F7      , KC_F8      , KC_F9      , _______, _______,
-                 A(KC_SCRL), KC_SCRL    , KC_F1      , KC_F2      , KC_F3  , _______,
-        ALLCAPS, _______   , KC_F4      , KC_F5      , KC_F6      , _______, _______,
-                             C(A(KC_F1)), C(A(KC_F2)), C(A(KC_F3)), _______, _______,
+        _______  , _______   , _______    , _______    , _______    , _______, _______,
+        TITLECASE, _______   , KC_F7      , KC_F8      , KC_F9      , _______, _______,
+                   A(KC_SCRL), KC_SCRL    , KC_F1      , KC_F2      , KC_F3  , _______,
+        ALLCAPS  , _______   , KC_F4      , KC_F5      , KC_F6      , _______, _______,
+                               C(A(KC_F1)), C(A(KC_F2)), C(A(KC_F3)), _______, _______,
         // right thumb
         _______, _______,
         _______,
