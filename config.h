@@ -35,7 +35,7 @@
 #define MOUSEKEY_TIME_TO_MAX 45
 
 // Define unicode version(s).
-#define UNICODE_SELECTED_MODES UC_LNX, UC_WINC
+#define UNICODE_SELECTED_MODES UNICODE_MODE_LINUX, UNICODE_MODE_WINCOMPOSE
 // Always start with unicode Linux.
 #define UNICODE_CYCLE_PERSIST false
 

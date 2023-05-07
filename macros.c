@@ -1,5 +1,5 @@
 enum custom_keycodes {
-    ALLCAPS = EZ_SAFE_RANGE,
+    ALLCAPS = SAFE_RANGE,
     CAPWRD,
     TITLECASE,
     LAMPOON,
@@ -148,7 +148,7 @@ bool process_macro_user(uint16_t keycode, const keyrecord_t *record) {
                 return false;
             case UCMOD:
                 cycle_unicode_input_mode(1);
-                if (unicode_config.input_mode == UC_LNX) {
+                if (unicode_config.input_mode == UNICODE_MODE_LINUX) {
                     ergodox_right_led_3_off();
                 } else {
                     ergodox_right_led_3_on();
