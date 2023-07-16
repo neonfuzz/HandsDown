@@ -51,7 +51,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
         _______   , KC_J        , KC_G        , KC_M        , KC_P        , KC_V   , _______,
         C(S(KC_Z)), LCTL_T(KC_R), LGUI_T(KC_S), LALT_T(KC_N), LSFT_T(KC_D), KC_B   ,
         C(KC_Z)   , KC_X        , KC_F        , KC_L        , KC_C        , KC_W   , KC_MEH ,
-        C(KC_A)   , C(KC_X)     , C(KC_C)     , C(KC_V)     , TT(_ARROW)       ,
+        C(KC_A)   , C(KC_X)     , C(KC_C)     , C(KC_V)     , TT(_ARROW)  ,
         // left thumb
                            KC_ESC      , OSL(_INTERNATIONAL),
                                          MO(_EMOJI)         ,
@@ -162,11 +162,11 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 
     [_ARROW] = LAYOUT_ergodox(
         // left hand
-        _______, KC_1         , KC_2        , KC_3        , KC_4        , KC_5   , _______,
-        _______, LCTL_T(KC_NO), LGUI_T(KC_Q), LALT_T(KC_W), LSFT_T(KC_E), KC_R   , _______,
-        _______, KC_A         , KC_NO       , KC_S        , KC_D        , _______,
-        _______, _______      , _______     , _______     , _______     , _______, _______,
-        _______, _______      , _______     , _______     , _______     ,
+        _______, KC_1   , KC_2   , KC_3   , KC_4   , KC_5   , _______,
+        _______, KC_NO  , KC_Q   , KC_W   , KC_E   , KC_R   , _______,
+        _______, KC_A   , KC_NO  , KC_S   , KC_D   , _______,
+        _______, _______, _______, _______, _______, _______, _______,
+        _______, _______, _______, _______, _______,
         // left thumb
                  _______, TO(0)  ,
                           _______,
