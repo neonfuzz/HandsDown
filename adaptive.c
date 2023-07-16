@@ -17,6 +17,10 @@ bool process_adaptive_user(uint16_t keycode, const keyrecord_t *record) {
             // Don't do anything if mods are present.
             return true;
         }
+        if (keycode >= QK_UNICODEMAP) {
+            // Don't do anything if we're in unicode mode.
+            return true;
+        }
         if (timer_elapsed32(prior_keydown) < ADAPTIVE_TERM) {
             return_state    = true;
             uint16_t first  = KC_NO;
