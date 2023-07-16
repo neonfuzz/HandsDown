@@ -2,7 +2,7 @@ My implementation of the Hands Down Gold Layout, as defined on [Alan Reiser's Ha
 
 Code is largely my own, though heavily inspired by [Alan Reiser's own QMK implementation](https://github.com/moutis/HandsDown). That being said, `adaptive.c` is inspired more by [`replicaJunction`'s adaptive pull request](https://github.com/qmk/qmk_firmware/pull/14034).
 
-Successfully compiled with qmk firmware 0.20.7
+Successfully compiled with qmk firmware 0.21.6
 
 Features
 ========

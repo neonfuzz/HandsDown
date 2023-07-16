@@ -26,7 +26,7 @@
 
 // Layer tap toggle number of taps.
 #undef TAPPING_TOGGLE
-#define TAPPING_TOGGLE 2
+#define TAPPING_TOGGLE 1
 
 // Mouse mode settings.
 #undef MOUSEKEY_MAX_SPEED
