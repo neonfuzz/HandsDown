@@ -51,6 +51,12 @@ bool process_adaptive_user(uint16_t keycode, const keyrecord_t *record) {
                     break;
                 case KC_C: // CW -> CD
                     switch (keycode) {
+                        case KC_L:
+                            // Forces "CL" to be "Cl" even though
+                            // it isn't technically adaptive.
+                            return_state = false;
+                            second       = KC_L;
+                            break;
                         case KC_W:
                             return_state = false;
                             second       = KC_D;
