@@ -122,7 +122,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
         _______, _______, _______, _______, _______, _______, LAMPOON,
         _______, _______, _______, _______, _______,
         // left thumb
-                      _______, KC_VOLU,
+                      KC_MPLY, KC_VOLU,
                                KC_VOLD,
         C(A(KC_DEL)), _______, _______,
         // right hand
