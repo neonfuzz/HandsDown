@@ -74,6 +74,8 @@ enum combos {
     PE_PEOPLE,
     // 7-grams
     UM_UNACCOM,
+    // 8-grams
+    WRV_WHEREVER,
     // Pronouns
     ID_ID,
     IE_IVE,
@@ -189,6 +191,9 @@ const uint16_t PROGMEM people_combo[] = {KC_P, RALT_T(KC_E), COMBO_END};
 // 7-grams
 const uint16_t PROGMEM unaccom_combo[] = {KC_U, KC_M, COMBO_END};
 
+// 8-grams
+const uint16_t PROGMEM wherever_combo[] = {KC_W, LCTL_T(KC_R), KC_V, COMBO_END};
+
 // Pronouns
 const uint16_t PROGMEM id_combo[]         = {RGUI_T(KC_I), LSFT_T(KC_D), COMBO_END};
 const uint16_t PROGMEM ive_combo[]        = {RGUI_T(KC_I), RALT_T(KC_E), COMBO_END};
@@ -295,6 +300,8 @@ combo_t key_combos[] = {
     [PE_PEOPLE] = COMBO_ACTION(people_combo),
     // 7-grams
     [UM_UNACCOM] = COMBO_ACTION(unaccom_combo),
+    // 8-grams
+    [WRV_WHEREVER] = COMBO_ACTION(wherever_combo),
     // Pronouns
     [ID_ID]         = COMBO_ACTION(id_combo),
     [IE_IVE]        = COMBO_ACTION(ive_combo),
@@ -738,6 +745,13 @@ void process_combo_event(uint16_t combo_index, bool pressed) {
                 clear_mods();
                 SEND_STRING("naccom");
                 backspace_amt = 7;
+                break;
+            // 8-grams
+            case WRV_WHEREVER:
+                tap_code16(KC_W);
+                clear_mods();
+                SEND_STRING("herever");
+                backspace_amt = 8;
                 break;
             // Pronouns
             case ID_ID:
