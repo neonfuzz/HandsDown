@@ -360,330 +360,395 @@ void process_combo_event(uint16_t combo_index, bool pressed) {
                 tap_code16(KC_T);
                 clear_mods();
                 tap_code16(KC_H);
+                backspace_amt = 2;
                 break;
             case CL_CH:
                 tap_code16(KC_C);
                 clear_mods();
                 tap_code16(KC_H);
+                backspace_amt = 2;
                 break;
             case SN_SH:
                 tap_code16(KC_S);
                 clear_mods();
                 tap_code16(KC_H);
+                backspace_amt = 2;
                 break;
             case HI_WH:
                 tap_code16(KC_W);
                 clear_mods();
                 tap_code16(KC_H);
+                backspace_amt = 2;
                 break;
             case GM_GH:
                 tap_code16(KC_G);
                 clear_mods();
                 tap_code16(KC_H);
+                backspace_amt = 2;
                 break;
             case PM_PH:
                 tap_code16(KC_P);
                 clear_mods();
                 tap_code16(KC_H);
+                backspace_amt = 2;
                 break;
             // 3-grams
             case AG_ANG:
                 tap_code16(KC_A);
                 clear_mods();
                 SEND_STRING("ng");
+                backspace_amt = 3;
                 break;
             case EG_ENG:
                 tap_code16(KC_E);
                 clear_mods();
                 SEND_STRING("ng");
+                backspace_amt = 3;
                 break;
             case EX_EXC:
                 tap_code16(KC_E);
                 clear_mods();
                 SEND_STRING("xc");
+                backspace_amt = 3;
                 break;
             case IG_ING:
                 tap_code16(KC_I);
                 clear_mods();
                 SEND_STRING("ng");
+                backspace_amt = 3;
                 break;
             case IK_ITY:
                 tap_code16(KC_I);
                 clear_mods();
                 SEND_STRING("ty");
+                backspace_amt = 3;
                 break;
             case NC_NCE:
                 tap_code16(KC_N);
                 clear_mods();
                 SEND_STRING("ce");
+                backspace_amt = 3;
                 break;
             case NH_NCH:
                 tap_code16(KC_N);
                 clear_mods();
                 SEND_STRING("ch");
+                backspace_amt = 3;
                 break;
             case IN_N_T:
                 tap_code16(KC_N);
                 clear_mods();
                 SEND_STRING("'t");
+                backspace_amt = 3;
                 break;
             case OG_ONG:
                 tap_code16(KC_O);
                 clear_mods();
                 SEND_STRING("ng");
+                backspace_amt = 3;
                 break;
             case UG_UNG:
                 tap_code16(KC_U);
                 clear_mods();
                 SEND_STRING("ng");
+                backspace_amt = 3;
                 break;
             case WY_WHY:
                 tap_code16(KC_W);
                 clear_mods();
                 SEND_STRING("hy");
+                backspace_amt = 3;
                 break;
             // 4-grams
             case AH_AUGH:
                 tap_code16(KC_A);
                 clear_mods();
                 SEND_STRING("ugh");
+                backspace_amt = 4;
                 break;
             case AU_AUTO:
                 tap_code16(KC_A);
                 clear_mods();
                 SEND_STRING("uto");
+                backspace_amt = 4;
                 break;
             case AV_AVER:
                 tap_code16(KC_A);
                 clear_mods();
                 SEND_STRING("ver");
+                backspace_amt = 4;
                 break;
             case CR_CESS:
                 tap_code16(KC_C);
                 clear_mods();
                 SEND_STRING("ess");
+                backspace_amt = 4;
                 break;
             case EV_EVER:
                 tap_code16(KC_E);
                 clear_mods();
                 SEND_STRING("ver");
+                backspace_amt = 4;
                 break;
             case FX_FROM:
                 tap_code16(KC_F);
                 clear_mods();
                 SEND_STRING("rom");
+                backspace_amt = 4;
                 break;
             case HR_HERE:
                 tap_code16(KC_H);
                 clear_mods();
                 SEND_STRING("ere");
+                backspace_amt = 4;
                 break;
             case HV_HAVE:
                 tap_code16(KC_H);
                 clear_mods();
                 SEND_STRING("ave");
+                backspace_amt = 4;
                 break;
             case IT_IGHT:
                 tap_code16(KC_I);
                 clear_mods();
                 SEND_STRING("ght");
+                backspace_amt = 4;
                 break;
             case IV_IVER:
                 tap_code16(KC_I);
                 clear_mods();
                 SEND_STRING("ver");
+                backspace_amt = 4;
                 break;
             case LR_LESS:
                 tap_code16(KC_L);
                 clear_mods();
                 SEND_STRING("ess");
+                backspace_amt = 4;
                 break;
             case MT_MENT:
                 tap_code16(KC_M);
                 clear_mods();
                 SEND_STRING("ent");
+                backspace_amt = 4;
                 break;
             case NR_NESS:
                 tap_code16(KC_N);
                 clear_mods();
                 SEND_STRING("ess");
+                backspace_amt = 4;
                 break;
             case OH_OUGH:
                 tap_code16(KC_O);
                 clear_mods();
                 SEND_STRING("ugh");
+                backspace_amt = 4;
                 break;
             case OD_OULD:
                 tap_code16(KC_O);
                 clear_mods();
                 SEND_STRING("uld");
+                backspace_amt = 4;
                 break;
             case OV_OVER:
                 tap_code16(KC_O);
                 clear_mods();
                 SEND_STRING("ver");
+                backspace_amt = 4;
                 break;
             case SI_SEMI:
                 tap_code16(KC_S);
                 clear_mods();
                 SEND_STRING("emi");
+                backspace_amt = 4;
                 break;
             case SD_SOME:
                 tap_code16(KC_S);
                 clear_mods();
                 SEND_STRING("ome");
+                backspace_amt = 4;
                 break;
             case SL_SELF:
                 tap_code16(KC_S);
                 clear_mods();
                 SEND_STRING("elf");
+                backspace_amt = 4;
                 break;
             case SP_SHIP:
                 tap_code16(KC_S);
                 clear_mods();
                 SEND_STRING("hip");
+                backspace_amt = 4;
                 break;
             case TE_TIME:
                 tap_code16(KC_T);
                 clear_mods();
                 SEND_STRING("ime");
+                backspace_amt = 4;
                 break;
             case TN_TION:
                 tap_code16(KC_T);
                 clear_mods();
                 SEND_STRING("ion");
+                backspace_amt = 4;
                 break;
             case WA_WARD:
                 tap_code16(KC_W);
                 clear_mods();
                 SEND_STRING("ard");
+                backspace_amt = 4;
                 break;
             case WI_WITH:
                 tap_code16(KC_W);
                 clear_mods();
                 SEND_STRING("ith");
+                backspace_amt = 4;
                 break;
             case WK_WORK:
                 tap_code16(KC_W);
                 clear_mods();
                 SEND_STRING("ork");
+                backspace_amt = 4;
                 break;
             case WO_WORD:
                 tap_code16(KC_W);
                 clear_mods();
                 SEND_STRING("ord");
+                backspace_amt = 4;
                 break;
             case WT_WHAT:
                 tap_code16(KC_W);
                 clear_mods();
                 SEND_STRING("hat");
+                backspace_amt = 4;
                 break;
             case WN_WHEN:
                 tap_code16(KC_W);
                 clear_mods();
                 SEND_STRING("hen");
+                backspace_amt = 4;
                 break;
             case WX_WERE:
                 tap_code16(KC_W);
                 clear_mods();
                 SEND_STRING("ere");
+                backspace_amt = 4;
                 break;
             // 5-grams
             case AM_ACCOM:
                 tap_code16(KC_A);
                 clear_mods();
                 SEND_STRING("ccom");
+                backspace_amt = 5;
                 break;
             case IEG_INGLE:
                 tap_code16(KC_I);
                 clear_mods();
                 SEND_STRING("ngle");
+                backspace_amt = 5;
                 break;
             case MJ_MULTI:
                 tap_code16(KC_M);
                 clear_mods();
                 SEND_STRING("ulti");
+                backspace_amt = 5;
                 break;
             case OL_OLOGY:
                 tap_code16(KC_O);
                 clear_mods();
                 SEND_STRING("logy");
+                backspace_amt = 5;
                 break;
             case OR_OTHER:
                 tap_code16(KC_O);
                 clear_mods();
                 SEND_STRING("ther");
+                backspace_amt = 5;
                 break;
             case OT_OUGHT:
                 tap_code16(KC_O);
                 clear_mods();
                 SEND_STRING("ught");
+                backspace_amt = 5;
                 break;
             case RM_RECOM:
                 tap_code16(KC_R);
                 clear_mods();
                 SEND_STRING("ecom");
+                backspace_amt = 5;
                 break;
             case SR_SUPER:
                 tap_code16(KC_S);
                 clear_mods();
                 SEND_STRING("uper");
+                backspace_amt = 5;
                 break;
             case TA_TRANS:
                 tap_code16(KC_T);
                 clear_mods();
                 SEND_STRING("rans");
+                backspace_amt = 5;
                 break;
             case TR_THERE:
                 tap_code16(KC_T);
                 clear_mods();
                 SEND_STRING("here");
+                backspace_amt = 5;
                 break;
             case TG_THING:
                 tap_code16(KC_T);
                 clear_mods();
                 SEND_STRING("hing");
+                backspace_amt = 5;
                 break;
             case UR_UNDER:
                 tap_code16(KC_U);
                 clear_mods();
                 SEND_STRING("nder");
+                backspace_amt = 5;
                 break;
             case WC_WHICH:
                 tap_code16(KC_W);
                 clear_mods();
                 SEND_STRING("hich");
+                backspace_amt = 5;
                 break;
             case WR_WHERE:
                 tap_code16(KC_W);
                 clear_mods();
                 SEND_STRING("here");
+                backspace_amt = 5;
                 break;
             // 6-grams
             case NA_NATION:
                 tap_code16(KC_N);
                 clear_mods();
                 SEND_STRING("ation");
+                backspace_amt = 6;
                 break;
             case PE_PEOPLE:
                 tap_code16(KC_P);
                 clear_mods();
                 SEND_STRING("eople");
+                backspace_amt = 6;
                 break;
             // 7-grams
             case UM_UNACCOM:
                 tap_code16(KC_U);
                 clear_mods();
                 SEND_STRING("naccom");
+                backspace_amt = 7;
                 break;
             // Pronouns
             case ID_ID:
                 cap_i();
                 SEND_STRING("'d");
+                backspace_amt = 3;
                 break;
             case IE_IVE:
                 cap_i();
                 SEND_STRING("'ve");
+                backspace_amt = 4;
                 break;
             case IL_ILL:
                 cap_i();
@@ -692,110 +757,132 @@ void process_combo_event(uint16_t combo_index, bool pressed) {
             case IM_IM:
                 cap_i();
                 SEND_STRING("'m");
+                backspace_amt = 4;
                 break;
             case MS_MYSELF:
                 tap_code16(KC_M);
                 SEND_STRING("yself");
+                backspace_amt = 6;
                 break;
             case TD_THEYD:
                 tap_code16(KC_T);
                 clear_mods();
                 SEND_STRING("hey'd");
+                backspace_amt = 6;
                 break;
             case TJ_THEYRE:
                 tap_code16(KC_T);
                 clear_mods();
                 SEND_STRING("hey're");
+                backspace_amt = 7;
                 break;
             case TL_THEYLL:
                 tap_code16(KC_T);
                 clear_mods();
                 SEND_STRING("hey'll");
+                backspace_amt = 7;
                 break;
             case TV_THEYVE:
                 tap_code16(KC_T);
                 clear_mods();
                 SEND_STRING("hey've");
+                backspace_amt = 7;
                 break;
             case TX_THEIR:
                 tap_code16(KC_T);
                 clear_mods();
                 SEND_STRING("heir");
+                backspace_amt = 5;
                 break;
             case TY_THEY:
                 tap_code16(KC_T);
                 clear_mods();
                 SEND_STRING("hey");
+                backspace_amt = 4;
                 break;
             case MD_THEM:
                 tap_code16(KC_T);
                 clear_mods();
                 SEND_STRING("hem");
+                backspace_amt = 4;
                 break;
             case TS_THEMSELVES:
                 tap_code16(KC_T);
                 clear_mods();
                 SEND_STRING("hemselves");
+                backspace_amt = 10;
                 break;
             case WD_WED:
                 tap_code16(KC_W);
                 clear_mods();
                 SEND_STRING("e'd");
+                backspace_amt = 4;
                 break;
             case WJ_WERE:
                 tap_code16(KC_W);
                 clear_mods();
                 SEND_STRING("e're");
+                backspace_amt = 5;
                 break;
             case WL_WELL:
                 tap_code16(KC_W);
                 clear_mods();
                 SEND_STRING("e'll");
+                backspace_amt = 5;
                 break;
             case WV_WEVE:
                 tap_code16(KC_W);
                 clear_mods();
                 SEND_STRING("e've");
+                backspace_amt = 5;
                 break;
             case OS_OURSELVES:
                 tap_code16(KC_O);
                 clear_mods();
                 SEND_STRING("urselves");
+                backspace_amt = 9;
                 break;
             case YD_YOUD:
                 tap_code16(KC_Y);
                 clear_mods();
                 SEND_STRING("ou'd");
+                backspace_amt = 5;
                 break;
             case YJ_YOURE:
                 tap_code16(KC_Y);
                 clear_mods();
                 SEND_STRING("ou're");
+                backspace_amt = 6;
                 break;
             case YL_YOULL:
                 tap_code16(KC_Y);
                 clear_mods();
                 SEND_STRING("ou'll");
+                backspace_amt = 6;
                 break;
             case YV_YOUVE:
                 tap_code16(KC_Y);
                 clear_mods();
                 SEND_STRING("ou've");
+                backspace_amt = 6;
                 break;
             case YX_YOUR:
                 tap_code16(KC_Y);
                 clear_mods();
                 SEND_STRING("our");
+                backspace_amt = 4;
                 break;
             case YF_YOURSELF:
                 tap_code16(KC_Y);
                 clear_mods();
                 SEND_STRING("ourself");
+                backspace_amt = 8;
                 break;
             case YS_YOURSELVES:
                 tap_code16(KC_Y);
                 clear_mods();
                 SEND_STRING("ourselves");
+                backspace_amt = 10;
                 break;
         }
     }

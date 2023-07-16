@@ -14,6 +14,7 @@ enum layer_names {
 #include QMK_KEYBOARD_H
 #include "version.h"
 #include "caps.c"
+#include "backspace.c"
 #include "macros.c"
 #include "leds.c"
 #include "linger.c"

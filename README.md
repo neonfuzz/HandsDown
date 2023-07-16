@@ -46,6 +46,8 @@ Sets of keys pressed together (chorded) will produce different output than if th
  * Common word pieces e.g., ANG, ITY, SUPER
  * Pronouns e.g., I'VE, THEMSELVES, YOU'LL
 
+If you press BACKSPACE after having typed a combo, the entire combo will be backspace'd.
+
 Overrides
 ---------
 Change default shifted behavior of some keys.
