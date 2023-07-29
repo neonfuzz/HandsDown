@@ -34,6 +34,55 @@ enum unicode_names {
     UACCUP,   // Ú
     ESZETTUP, // ẞ
     NTILDEUP, // Ñ
+    // greek
+    ALPHA, // α
+    BETA,  // β
+    GAMMA, // γ
+    DELTA, // δ
+    EPSIL, // ϵ
+    ZETA,  // ζ
+    ETA,   // η
+    THETA, // θ
+    IOTA,  // ι
+    KAPPA, // κ
+    LAMBD, // λ
+    MU,    // μ
+    NU,    // ν
+    XI,    // ξ
+    OMICR, // �
+    PI,    // π
+    RHO,   // ρ
+    SIGMA, // σ
+    TAU,   // τ
+    UPSIL, // υ
+    PHI,   // ϕ
+    CHI,   // χ
+    PSI,   // ψ
+    OMEGA, // ω
+    ALPUP, // Α
+    BETUP, // Β
+    GAMUP, // Γ
+    DELUP, // Δ
+    EPSUP, // Ε
+    ZETUP, // Ζ
+    ETAUP, // Η
+    THEUP, // Θ
+    IOTUP, // Ι
+    KAPUP, // Κ
+    LAMUP, // Λ
+    MUUP,  // Μ
+    NUUP,  // Ν
+    XIUP,  // Ξ
+    OMIUP, // Ο
+    PIUP,  // Π
+    RHOUP, // Ρ
+    SIGUP, // Σ
+    TAUUP, // Τ
+    UPSUP, // ϒ
+    PHIUP, // Φ
+    CHIUP, // Χ
+    PSIUP, // Ψ
+    OMEUP, // Ω
     // special symbols
     TM,      // ™
     RTM,     // ®
@@ -76,6 +125,55 @@ const uint32_t unicode_map[] PROGMEM = {
     [UACCUP  ] = 0x00da,
     [ESZETTUP] = 0x1e9e,
     [NTILDEUP] = 0x00d1,
+    //greek
+    [ALPHA] = 0x03b1,
+    [BETA ] = 0x03b2,
+    [GAMMA] = 0x03b3,
+    [DELTA] = 0x03b4,
+    [EPSIL] = 0x03b5,
+    [ZETA ] = 0x03b6,
+    [ETA  ] = 0x03b7,
+    [THETA] = 0x03b8,
+    [IOTA ] = 0x03b9,
+    [KAPPA] = 0x03ba,
+    [LAMBD] = 0x03bb,
+    [MU   ] = 0x03bc,
+    [NU   ] = 0x03bd,
+    [XI   ] = 0x03be,
+    [OMICR] = 0x03bf,
+    [PI   ] = 0x03c0,
+    [RHO  ] = 0x03c1,
+    [SIGMA] = 0x03c3,
+    [TAU  ] = 0x03c4,
+    [UPSIL] = 0x03c5,
+    [PHI  ] = 0x03c6,
+    [CHI  ] = 0x03c7,
+    [PSI  ] = 0x03c8,
+    [OMEGA] = 0x03c9,
+    [ALPUP] = 0x0391,
+    [BETUP] = 0x0392,
+    [GAMUP] = 0x0393,
+    [DELUP] = 0x0394,
+    [EPSUP] = 0x0395,
+    [ZETUP] = 0x0396,
+    [ETAUP] = 0x0397,
+    [THEUP] = 0x0398,
+    [IOTUP] = 0x0399,
+    [KAPUP] = 0x039a,
+    [LAMUP] = 0x039b,
+    [MUUP ] = 0x039c,
+    [NUUP ] = 0x039d,
+    [XIUP ] = 0x039e,
+    [OMIUP] = 0x039f,
+    [PIUP ] = 0x03a0,
+    [RHOUP] = 0x03a1,
+    [SIGUP] = 0x03a3,
+    [TAUUP] = 0x03a4,
+    [UPSUP] = 0x03a5,
+    [PHIUP] = 0x03a6,
+    [CHIUP] = 0x03a7,
+    [PSIUP] = 0x03a8,
+    [OMEUP] = 0x03a9,
     // special symbols
     [TM     ] = 0x2122,
     [RTM    ] = 0x00ae,
