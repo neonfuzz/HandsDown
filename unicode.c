@@ -20,20 +20,20 @@ enum unicode_names {
     DOG,        // 🐕️
     TPANDA,     // 🦝
     // special characters
-    AACC,       // á
-    EACC,       // é
-    IACC,       // í
-    OACC,       // ó
-    UACC,       // ú
-    ESZETT,     // ß
-    NTILDE,     // ñ
-    AACC_CAP,   // Á
-    EACC_CAP,   // É
-    IACC_CAP,   // Í
-    OACC_CAP,   // Ó
-    UACC_CAP,   // Ú
-    ESZETT_CAP, // ẞ
-    NTILDE_CAP, // Ñ
+    AACC,     // á
+    EACC,     // é
+    IACC,     // í
+    OACC,     // ó
+    UACC,     // ú
+    ESZETT,   // ß
+    NTILDE,   // ñ
+    AACCUP,   // Á
+    EACCUP,   // É
+    IACCUP,   // Í
+    OACCUP,   // Ó
+    UACCUP,   // Ú
+    ESZETTUP, // ẞ
+    NTILDEUP, // Ñ
     // special symbols
     TM,      // ™
     RTM,     // ®
@@ -41,6 +41,7 @@ enum unicode_names {
 };
 
 const uint32_t unicode_map[] PROGMEM = {
+    // emoji
     [IMP       ] = 0x1f608,
     [HEART     ] = 0x1f49c,
     [HEARTEYES ] = 0x1f60d,
@@ -60,21 +61,23 @@ const uint32_t unicode_map[] PROGMEM = {
     [GOAT      ] = 0x1f410,
     [DOG       ] = 0x1f415,
     [TPANDA    ] = 0x1f99d,
-    [AACC      ] = 0x00e1,
-    [EACC      ] = 0x00e9,
-    [IACC      ] = 0x00ed,
-    [OACC      ] = 0x00f3,
-    [UACC      ] = 0x00fa,
-    [ESZETT    ] = 0x00df,
-    [NTILDE    ] = 0x00f1,
-    [AACC_CAP  ] = 0x00c1,
-    [EACC_CAP  ] = 0x00c9,
-    [IACC_CAP  ] = 0x00cd,
-    [OACC_CAP  ] = 0x00d3,
-    [UACC_CAP  ] = 0x00da,
-    [ESZETT_CAP] = 0x1e9e,
-    [NTILDE_CAP] = 0x00d1,
-    [TM        ] = 0x2122,
-    [RTM       ] = 0x00ae,
-    [UPQUEST   ] = 0x00bf,
+    // special characters
+    [AACC    ] = 0x00e1,
+    [EACC    ] = 0x00e9,
+    [IACC    ] = 0x00ed,
+    [OACC    ] = 0x00f3,
+    [UACC    ] = 0x00fa,
+    [ESZETT  ] = 0x00df,
+    [NTILDE  ] = 0x00f1,
+    [AACCUP  ] = 0x00c1,
+    [EACCUP  ] = 0x00c9,
+    [IACCUP  ] = 0x00cd,
+    [OACCUP  ] = 0x00d3,
+    [UACCUP  ] = 0x00da,
+    [ESZETTUP] = 0x1e9e,
+    [NTILDEUP] = 0x00d1,
+    // special symbols
+    [TM     ] = 0x2122,
+    [RTM    ] = 0x00ae,
+    [UPQUEST] = 0x00bf,
 };

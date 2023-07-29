@@ -1,14 +1,14 @@
 enum layer_names {
-    _HDGOLD,        // 0
-    _SYMBOLS,       // 1
-    _NUMPAD,        // 2
-    _FKEYS,         // 3
-    _MOUSE,         // 4
-    _ARROW,         // 5
-    _INTERNATIONAL, // 6
-    _QWERTY,        // 7
-    _GAMING,        // 8
-    _EMOJI,         // 9
+    _HDGOLD,
+    _SYMBOLS,
+    _NUMPAD,
+    _FKEYS,
+    _MOUSE,
+    _ARROW,
+    _INTERNATIONAL,
+    _QWERTY,
+    _GAMING,
+    _EMOJI,
 };
 
 #include QMK_KEYBOARD_H
@@ -187,21 +187,21 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 
     [_INTERNATIONAL] = LAYOUT_ergodox(
         // left hand
-        _______, _______, _______               , _______               , _______, _______, _______,
-        _______, _______, _______               , _______               , _______, _______, _______,
-        _______, X(RTM) , XP(ESZETT, ESZETT_CAP), XP(NTILDE, NTILDE_CAP), _______, _______,
-        _______, _______, _______               , _______               , _______, _______, _______,
-        _______, _______, _______               , _______               , _______,
+        _______, _______, _______             , _______             , _______, _______, _______,
+        _______, _______, _______             , _______             , _______, _______, _______,
+        _______, X(RTM) , XP(ESZETT, ESZETTUP), XP(NTILDE, NTILDEUP), _______, _______,
+        _______, _______, _______             , _______             , _______, _______, _______,
+        _______, _______, _______             , _______             , _______,
         // left thumb
                  _______, TO(0)  ,
                           _______,
         X(TM),   _______, _______,
         // right hand
-        _______, _______, _______           , _______           , _______           , _______   , _______,
-        _______, _______, _______           , _______           , KC_GRV            , X(UPQUEST), _______,
-                 _______, XP(AACC, AACC_CAP), XP(EACC, EACC_CAP), XP(IACC, IACC_CAP), _______   , _______,
-        _______, _______, XP(UACC, UACC_CAP), XP(OACC, OACC_CAP), _______           , _______   , _______,
-                          _______           , _______           , _______           , _______   , _______,
+        _______, _______, _______         , _______         , _______         , _______   , _______,
+        _______, _______, _______         , _______         , KC_GRV          , X(UPQUEST), _______,
+                 _______, XP(AACC, AACCUP), XP(EACC, EACCUP), XP(IACC, IACCUP), _______   , _______,
+        _______, _______, XP(UACC, UACCUP), XP(OACC, OACCUP), _______         , _______   , _______,
+                          _______         , _______         , _______         , _______   , _______,
         // right thumb
         TO(0)      , TO(_QWERTY),
         TO(_GAMING),
