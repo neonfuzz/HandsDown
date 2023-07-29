@@ -6,6 +6,7 @@ enum layer_names {
     _MOUSE,
     _ARROW,
     _INTERNATIONAL,
+    _UKRANIAN,
     _GREEK,
     _QWERTY,
     _GAMING,
@@ -194,9 +195,9 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
         _______, _______, _______             , _______             , _______, _______, _______,
         _______, _______, _______             , _______             , _______,
         // left thumb
-                 _______, TO(0)     ,
-                          _______   ,
-        X(TM),   _______, TO(_GREEK),
+                 _______, TO(0)        ,
+                          TO(_UKRANIAN),
+        X(TM),   _______, TO(_GREEK)   ,
         // right hand
         _______, _______, _______         , _______         , _______         , _______   , _______,
         _______, _______, _______         , _______         , KC_GRV          , X(UPQUEST), _______,
@@ -207,6 +208,29 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
         TO(0)      , TO(_QWERTY),
         TO(_GAMING),
         _______    , _______    , _______
+    ),
+
+    [_UKRANIAN] = LAYOUT_ergodox(
+        // left hand
+        _______, _______         , _______         , _______         , _______           , _______         , _______,
+        _______, XP(UK_J, UK_JUP), XP(UK_G, UK_GUP), XP(UK_M, UK_MUP), XP(UK_P, UK_PUP)  , XP(UK_V, UK_VUP), _______,
+        _______, XP(UK_R, UK_RUP), XP(UK_S, UK_SUP), XP(UK_N, UK_NUP), XP(UK_D, UK_DUP)  , XP(UK_B, UK_BUP),
+        _______, XP(UK_X, UK_XUP), XP(UK_F, UK_FUP), XP(UK_L, UK_LUP), XP(UK_CH, UK_CHUP), XP(UK_Z, UK_ZUP), _______,
+        _______, _______         , _______         , _______         , _______           ,
+        // left thumb
+                          _______           , TO(0)                 ,
+                                              XP(UK_SHCH, UK_SHCHUP),
+        XP(UK_T, UK_TUP), XP(UK_TS, UK_TSUP), XP(UK_SH, UK_SHUP)    ,
+        // right hand
+        _______, _______               , _______           , _______           , _______           , _______           , _______,
+        _______, XP(UK_YU, UK_YUUP)    , XP(UK_YA, UK_YAUP), XP(UK_YE, UK_YEUP), XP(UK_YI, UK_YIUP), XP(UK_YY, UK_YYUP), _______,
+                 _______               , XP(UK_A, UK_AUP)  , XP(UK_E, UK_EUP)  , XP(UK_I, UK_IUP)  , XP(UK_H, UK_HUP)  , _______,
+        _______, XP(UK_SOFT, UK_SOFTUP), XP(UK_U, UK_UUP)  , XP(UK_O, UK_OUP)  , XP(UK_Y, UK_YUP)  , XP(UK_K, UK_KUP)  , _______,
+                                         _______           , _______           , _______           , _______           , _______,
+        // right thumb
+        TO(0)  , _______,
+        _______,
+        _______, _______, _______
     ),
 
     [_GREEK] = LAYOUT_ergodox(
