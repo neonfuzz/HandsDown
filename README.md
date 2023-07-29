@@ -79,6 +79,7 @@ Programmed for the Ergodox EZ. See `keymap.c` for full mapping, as well as key n
  * **Mouse**: Basic mouse operations; Hold or double-tap 73 to activate.
  * **Arrow keys**: navigation on the right, modified WASD on the left; Hold or double-tap 31 to activate.
  * **International**: Accented vowels and other special characters; Tap 33 or 70 to activate for the next character.
+ * **Greek**: Send unicode Greek characters; Activate International and then tap 37 to activate. Tap 33 or 70 to exit.
  * **QWERTY**: Standard QWERTY for your friends; Activate International and then tap 71 to activate. Tap 33 or 70 to exit.
  * **Gaming**: Modified QWERTY for ergonomic gaming; Activate International and then tap 72 to activate. Tap 33 or 70 to exit.
  * **Emoji**: Most commonly-used emoji (by me); Hold 34 to activate.

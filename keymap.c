@@ -6,6 +6,7 @@ enum layer_names {
     _MOUSE,
     _ARROW,
     _INTERNATIONAL,
+    _GREEK,
     _QWERTY,
     _GAMING,
     _EMOJI,
@@ -193,9 +194,9 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
         _______, _______, _______             , _______             , _______, _______, _______,
         _______, _______, _______             , _______             , _______,
         // left thumb
-                 _______, TO(0)  ,
-                          _______,
-        X(TM),   _______, _______,
+                 _______, TO(0)     ,
+                          _______   ,
+        X(TM),   _______, TO(_GREEK),
         // right hand
         _______, _______, _______         , _______         , _______         , _______   , _______,
         _______, _______, _______         , _______         , KC_GRV          , X(UPQUEST), _______,
@@ -206,6 +207,29 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
         TO(0)      , TO(_QWERTY),
         TO(_GAMING),
         _______    , _______    , _______
+    ),
+
+    [_GREEK] = LAYOUT_ergodox(
+        // left hand
+        _______, _______       , _______         , _______         , _______         , _______         , _______,
+        _______, XP(XI, XIUP)  , XP(GAMMA, GAMUP), XP(MU, MUUP)    , XP(PI, PIUP)    , XP(OMEGA, OMEUP), _______,
+        _______, XP(RHO, RHOUP), XP(SIGMA, SIGUP), XP(NU, NUUP)    , XP(DELTA, DELUP), XP(BETA, BETUP) ,
+        _______, XP(CHI, CHIUP), XP(PHI, PHIUP)  , XP(LAMBD, LAMUP), XP(PSI, PSIUP)  , XP(ZETA, ZETUP) , _______,
+        _______, _______       , _______         , _______         , _______         ,
+        // left thumb
+                        _______, TO(0)  ,
+                                 _______,
+        XP(TAU, TAUUP), _______, _______,
+        // right hand
+        _______, _______, _______         , _______         , _______         , _______         , _______,
+        _______, _______, _______         , _______         , _______         , _______         , _______,
+                 _______, XP(ALPHA, ALPUP), XP(EPSIL, EPSUP), XP(IOTA, IOTUP) , XP(ETA, ETAUP)  , _______,
+        _______, _______, XP(THETA, THEUP), XP(OMICR, OMIUP), XP(UPSIL, UPSUP), XP(KAPPA, KAPUP), _______,
+                          _______         , _______         , _______         , _______         , _______,
+        // right thumb
+        TO(0)  , _______,
+        _______,
+        _______, _______, _______
     ),
 
     [_QWERTY] = LAYOUT_ergodox(

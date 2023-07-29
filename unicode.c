@@ -49,7 +49,7 @@ enum unicode_names {
     MU,    // μ
     NU,    // ν
     XI,    // ξ
-    OMICR, // �
+    OMICR, // ο
     PI,    // π
     RHO,   // ρ
     SIGMA, // σ
