@@ -72,6 +72,7 @@ enum combos {
     // 6-grams
     NA_NATION,
     PE_PEOPLE,
+    PU_PUBLIC,
     // 7-grams
     UM_UNACCOM,
     // 8-grams
@@ -187,6 +188,7 @@ const uint16_t PROGMEM where_combo[] = {KC_W, LCTL_T(KC_R), COMBO_END};
 // 6-grams
 const uint16_t PROGMEM nation_combo[] = {LALT_T(KC_N), RSFT_T(KC_A), COMBO_END};
 const uint16_t PROGMEM people_combo[] = {KC_P, RALT_T(KC_E), COMBO_END};
+const uint16_t PROGMEM public_combo[] = {KC_P, KC_U, COMBO_END};
 
 // 7-grams
 const uint16_t PROGMEM unaccom_combo[] = {KC_U, KC_M, COMBO_END};
@@ -298,6 +300,7 @@ combo_t key_combos[] = {
     // 6-grams
     [NA_NATION] = COMBO_ACTION(nation_combo),
     [PE_PEOPLE] = COMBO_ACTION(people_combo),
+    [PU_PUBLIC] = COMBO_ACTION(public_combo),
     // 7-grams
     [UM_UNACCOM] = COMBO_ACTION(unaccom_combo),
     // 8-grams
@@ -737,6 +740,12 @@ void process_combo_event(uint16_t combo_index, bool pressed) {
                 tap_code16(KC_P);
                 clear_mods();
                 SEND_STRING("eople");
+                backspace_amt = 6;
+                break;
+            case PU_PUBLIC:
+                tap_code16(KC_P);
+                clear_mods();
+                SEND_STRING("ublic");
                 backspace_amt = 6;
                 break;
             // 7-grams
