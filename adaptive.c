@@ -148,7 +148,7 @@ bool process_adaptive_user(uint16_t keycode, const keyrecord_t *record) {
                     break;
                 case KC_DOT: // .: -> .com
                     switch (keycode) {
-                        case KC_SCLN:
+                        case KC_COLN:
                             send_string("com");
                             return false;
                     }
