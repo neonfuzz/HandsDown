@@ -53,6 +53,7 @@ Overrides
 Change default shifted behavior of some keys.
 
  * SHIFT + . &rarr; &
+ * SHIFT + , &rarr; |
  * SHIFT + / &rarr; *
  * SHIFT + ? &rarr; !
  * SHIFT + _ &rarr; -

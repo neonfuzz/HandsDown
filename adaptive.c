@@ -204,7 +204,6 @@ void matrix_adaptive_user(void) {
                     set_mods(prior_saved_mods);
                     tap_code(KC_COMM);
                 }
-                clear_mods();
                 break;
         }
         prior_keydown = timer_read32();
