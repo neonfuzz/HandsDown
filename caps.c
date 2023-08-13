@@ -57,7 +57,7 @@ void caps_unset(void) {
         tap_code(KC_CAPS);
         caps_lock = false;
     }
-    ergodox_right_led_1_off();
+    layer_state_set_user(layer_state);
 }
 
 void allcaps_toggle(void) {
