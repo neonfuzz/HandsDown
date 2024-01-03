@@ -75,7 +75,7 @@ Programmed for the Ergodox EZ. See `keymap.c` for full mapping, as well as key n
 
  * **Base / HD Gold**
  * **Symbols**: Easy brackets, arrows, and regexes; Hold key 36 or 75(SPACE) to activate.
- * **Numpad**: Benford's law, most common numbers on the home row; Hold key 35(T) to activate.
+ * **Numpad**: Benford's law, most common numbers on the home row; Hold key 35(T) to activate OR go to Fkeys layer and tap key 35(T). Tap again to exit.
  * **Fkeys**: F1-9 as numpad, caps modes, system keys, tty switching macros, keyboard reset; Hold 37 to activate.
  * **Mouse**: Basic mouse operations; Hold or double-tap 73 to activate.
  * **Arrow keys**: navigation on the right, modified WASD on the left; Hold or double-tap 31 to activate.
