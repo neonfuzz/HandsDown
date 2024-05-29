@@ -15,17 +15,8 @@ enum layer_names {
 
 #include QMK_KEYBOARD_H
 #include "version.h"
-#include "caps.c"
-#include "backspace.c"
-#include "macros.c"
-#include "unicode.c"
+#include "layouts/community/hands_down_gold/hdgold.c"
 #include "leds.c"
-#include "linger.c"
-#include "adaptive.c"
-#include "combos.c"
-#include "overrides.c"
-#include "MATRIX_SCAN.c"
-#include "PROCESS_RECORD.c"
 
 const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     /*
