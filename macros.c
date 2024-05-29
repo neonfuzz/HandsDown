@@ -58,7 +58,7 @@ bool process_macro_user(uint16_t keycode, const keyrecord_t *record) {
                 send_unicode_string("🐈‍⬛");
                 return false;
             case UCMOD:
-                unicode_input_mode_step();
+                cycle_unicode_input_mode(+1);
                 if (unicode_config.input_mode == UNICODE_MODE_LINUX) {
                     ergodox_right_led_3_off();
                 } else {
