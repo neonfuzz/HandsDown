@@ -1,11 +1,6 @@
 bool process_record_user(uint16_t keycode, keyrecord_t *record) {
     bool return_state = true;
 
-    // Let QMK handle gaming layers. No need for fancy stuff.
-    if (IS_LAYER_ON(_GAMING) | IS_LAYER_ON(_ARROW)) {
-        return true;
-    }
-
     switch (keycode) {
         case QK_MOD_TAP ... QK_MOD_TAP_MAX:
         case QK_LAYER_TAP ... QK_LAYER_TAP_MAX:
